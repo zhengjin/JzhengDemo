@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *Save;
-- (IBAction)SaveClick:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *Save;//保存按钮对象
+
+- (IBAction)SaveClick:(id)sender;//单击事件
 
 @end

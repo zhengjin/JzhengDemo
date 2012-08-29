@@ -9,12 +9,14 @@
 #import "DetailController.h"
 
 @implementation DetailController
+
 @synthesize Save;
 
 - (void)viewDidUnload {
     [self setSave:nil];
     [super viewDidUnload];
 }
+
 - (IBAction)SaveClick:(id)sender {
     NSLog(@"%s","alter click");
     
