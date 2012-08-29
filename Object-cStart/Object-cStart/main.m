@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "HelloWord.h"
+#import "ClassForSelectors.h"
+
 int main (int argc, const char * argv[])
 {
 
@@ -16,6 +19,13 @@ int main (int argc, const char * argv[])
         // insert code here...
         NSLog(@"Hello, World!");
         
+        HelloWord* myHello=[[HelloWord alloc] init];
+        [myHello setGreetingText:@"Hello Object-c"];
+        [myHello issueGreeting];
+        
+        ClassForSelectors* mySelector=[[ClassForSelectors alloc] init];
+        [mySelector performMethodsViaSelectors];
+        [mySelector performDynamicMethodsViaSelectors];
     }
     return 0;
 }

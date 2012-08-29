@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		ACC20AA015EE3E91005D868E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC20A9F15EE3E91005D868E /* Foundation.framework */; };
 		ACC20AA315EE3E91005D868E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20AA215EE3E91005D868E /* main.m */; };
+		ACC20B0F15EE41FE005D868E /* HelloWord.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20B0E15EE41FE005D868E /* HelloWord.m */; };
+		ACC20B1415EE44BA005D868E /* ClassForSelectors.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20B1315EE44BA005D868E /* ClassForSelectors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		ACC20A9F15EE3E91005D868E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ACC20AA215EE3E91005D868E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ACC20AA515EE3E91005D868E /* Object-cStart-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Object-cStart-Prefix.pch"; sourceTree = "<group>"; };
+		ACC20B0D15EE41FE005D868E /* HelloWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWord.h; path = Class/HelloWord.h; sourceTree = "<group>"; };
+		ACC20B0E15EE41FE005D868E /* HelloWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWord.m; path = Class/HelloWord.m; sourceTree = "<group>"; };
+		ACC20B1215EE44BA005D868E /* ClassForSelectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassForSelectors.h; path = Class/ClassForSelectors.h; sourceTree = "<group>"; };
+		ACC20B1315EE44BA005D868E /* ClassForSelectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassForSelectors.m; path = Class/ClassForSelectors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		ACC20AA115EE3E91005D868E /* Object-cStart */ = {
 			isa = PBXGroup;
 			children = (
+				ACC20B1115EE4211005D868E /* Class */,
 				ACC20AA215EE3E91005D868E /* main.m */,
 				ACC20AA415EE3E91005D868E /* Supporting Files */,
 			);
@@ -82,6 +89,17 @@
 				ACC20AA515EE3E91005D868E /* Object-cStart-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACC20B1115EE4211005D868E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				ACC20B0D15EE41FE005D868E /* HelloWord.h */,
+				ACC20B0E15EE41FE005D868E /* HelloWord.m */,
+				ACC20B1215EE44BA005D868E /* ClassForSelectors.h */,
+				ACC20B1315EE44BA005D868E /* ClassForSelectors.m */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC20AA315EE3E91005D868E /* main.m in Sources */,
+				ACC20B0F15EE41FE005D868E /* HelloWord.m in Sources */,
+				ACC20B1415EE44BA005D868E /* ClassForSelectors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +246,7 @@
 				ACC20AAC15EE3E91005D868E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
