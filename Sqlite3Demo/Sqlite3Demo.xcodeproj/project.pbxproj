@@ -16,6 +16,7 @@
 		ACC20AFF15EE3FCA005D868E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC20AFD15EE3FCA005D868E /* MainStoryboard.storyboard */; };
 		ACC20B0215EE3FCA005D868E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20B0115EE3FCA005D868E /* ViewController.m */; };
 		ACC20B1B15EE4D0E005D868E /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20B1A15EE4D0E005D868E /* DetailController.m */; };
+		ACC20B5415EE6965005D868E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC20B5315EE6965005D868E /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		ACC20B0115EE3FCA005D868E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		ACC20B1915EE4D0E005D868E /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailController.h; path = Class/DetailController.h; sourceTree = "<group>"; };
 		ACC20B1A15EE4D0E005D868E /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailController.m; path = Class/DetailController.m; sourceTree = "<group>"; };
+		ACC20B5315EE6965005D868E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC20B5415EE6965005D868E /* libsqlite3.dylib in Frameworks */,
 				ACC20AEC15EE3FCA005D868E /* UIKit.framework in Frameworks */,
 				ACC20AEE15EE3FCA005D868E /* Foundation.framework in Frameworks */,
 				ACC20AF015EE3FCA005D868E /* CoreGraphics.framework in Frameworks */,
@@ -70,6 +73,7 @@
 		ACC20AEA15EE3FCA005D868E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACC20B5315EE6965005D868E /* libsqlite3.dylib */,
 				ACC20AEB15EE3FCA005D868E /* UIKit.framework */,
 				ACC20AED15EE3FCA005D868E /* Foundation.framework */,
 				ACC20AEF15EE3FCA005D868E /* CoreGraphics.framework */,
