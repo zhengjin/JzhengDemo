@@ -15,6 +15,7 @@
 		ACC20AFC15EE3FCA005D868E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20AFB15EE3FCA005D868E /* AppDelegate.m */; };
 		ACC20AFF15EE3FCA005D868E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC20AFD15EE3FCA005D868E /* MainStoryboard.storyboard */; };
 		ACC20B0215EE3FCA005D868E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20B0115EE3FCA005D868E /* ViewController.m */; };
+		ACC20B1B15EE4D0E005D868E /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC20B1A15EE4D0E005D868E /* DetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		ACC20AFE15EE3FCA005D868E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		ACC20B0015EE3FCA005D868E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		ACC20B0115EE3FCA005D868E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ACC20B1915EE4D0E005D868E /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailController.h; path = Class/DetailController.h; sourceTree = "<group>"; };
+		ACC20B1A15EE4D0E005D868E /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailController.m; path = Class/DetailController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +80,7 @@
 		ACC20AF115EE3FCA005D868E /* Sqlite3Demo */ = {
 			isa = PBXGroup;
 			children = (
-				ACC20AFA15EE3FCA005D868E /* AppDelegate.h */,
-				ACC20AFB15EE3FCA005D868E /* AppDelegate.m */,
-				ACC20B0015EE3FCA005D868E /* ViewController.h */,
-				ACC20B0115EE3FCA005D868E /* ViewController.m */,
+				ACC20B1D15EE4D1C005D868E /* Class */,
 				ACC20B0815EE3FD1005D868E /* Resourse */,
 				ACC20AF215EE3FCA005D868E /* Supporting Files */,
 			);
@@ -104,6 +104,19 @@
 				ACC20AFD15EE3FCA005D868E /* MainStoryboard.storyboard */,
 			);
 			name = Resourse;
+			sourceTree = "<group>";
+		};
+		ACC20B1D15EE4D1C005D868E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				ACC20AFA15EE3FCA005D868E /* AppDelegate.h */,
+				ACC20AFB15EE3FCA005D868E /* AppDelegate.m */,
+				ACC20B1915EE4D0E005D868E /* DetailController.h */,
+				ACC20B1A15EE4D0E005D868E /* DetailController.m */,
+				ACC20B0015EE3FCA005D868E /* ViewController.h */,
+				ACC20B0115EE3FCA005D868E /* ViewController.m */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +185,7 @@
 				ACC20AF815EE3FCA005D868E /* main.m in Sources */,
 				ACC20AFC15EE3FCA005D868E /* AppDelegate.m in Sources */,
 				ACC20B0215EE3FCA005D868E /* ViewController.m in Sources */,
+				ACC20B1B15EE4D0E005D868E /* DetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +297,7 @@
 				ACC20B0715EE3FCA005D868E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
