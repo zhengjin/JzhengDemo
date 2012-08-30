@@ -53,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACC145E815EFCB2B00249E82 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACC20B1915EE4D0E005D868E /* DetailController.h */,
+				ACC20B1A15EE4D0E005D868E /* DetailController.m */,
+				ACC20B0015EE3FCA005D868E /* ViewController.h */,
+				ACC20B0115EE3FCA005D868E /* ViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		ACC20ADC15EE3FC9005D868E = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +95,8 @@
 		ACC20AF115EE3FCA005D868E /* Sqlite3Demo */ = {
 			isa = PBXGroup;
 			children = (
-				ACC20B1D15EE4D1C005D868E /* Class */,
-				ACC20B0815EE3FD1005D868E /* Resourse */,
+				ACC20B1D15EE4D1C005D868E /* Sources */,
+				ACC20B0815EE3FD1005D868E /* Resources */,
 				ACC20AF215EE3FCA005D868E /* Supporting Files */,
 			);
 			path = Sqlite3Demo;
@@ -94,8 +105,6 @@
 		ACC20AF215EE3FCA005D868E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ACC20AFA15EE3FCA005D868E /* AppDelegate.h */,
-				ACC20AFB15EE3FCA005D868E /* AppDelegate.m */,
 				ACC20AF315EE3FCA005D868E /* Sqlite3Demo-Info.plist */,
 				ACC20AF415EE3FCA005D868E /* InfoPlist.strings */,
 				ACC20AF715EE3FCA005D868E /* main.m */,
@@ -104,23 +113,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ACC20B0815EE3FD1005D868E /* Resourse */ = {
+		ACC20B0815EE3FD1005D868E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				ACC20AFD15EE3FCA005D868E /* MainStoryboard.storyboard */,
 			);
-			name = Resourse;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		ACC20B1D15EE4D1C005D868E /* Class */ = {
+		ACC20B1D15EE4D1C005D868E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				ACC20B1915EE4D0E005D868E /* DetailController.h */,
-				ACC20B1A15EE4D0E005D868E /* DetailController.m */,
-				ACC20B0015EE3FCA005D868E /* ViewController.h */,
-				ACC20B0115EE3FCA005D868E /* ViewController.m */,
+				ACC20AFA15EE3FCA005D868E /* AppDelegate.h */,
+				ACC20AFB15EE3FCA005D868E /* AppDelegate.m */,
+				ACC145E815EFCB2B00249E82 /* ViewControllers */,
 			);
-			name = Class;
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
