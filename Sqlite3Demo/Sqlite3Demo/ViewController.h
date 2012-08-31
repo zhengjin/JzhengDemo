@@ -11,4 +11,10 @@
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *albumList;
+
+@property(nonatomic, retain)NSMutableDictionary *states;
+@property(nonatomic,retain) NSArray *datasource;
+
+-(void)setupArray;
+
 @end

@@ -10,6 +10,7 @@
 
 @implementation ViewController
 
+@synthesize states,datasource;
 @synthesize albumList = _albumList;
 
 - (void)didReceiveMemoryWarning
@@ -28,12 +29,19 @@
 //绑定数据
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cell_identifier = @"AlbumCell";
+    static NSString *cell_identifier = @"Cell";
     UITableViewCell *album_cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cell_identifier];
     if (album_cell == nil) {
         album_cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cell_identifier];
     }
-    album_cell.textLabel.text = @"album";
+    [[album_cell textLabel] setBackgroundColor:[UIColor clearColor]];
+    [[album_cell detailTextLabel] setBackgroundColor:[UIColor clearColor]];
+    
+    album_cell.textLabel.text = [datasource objectAtIndex:indexPath.row];
+    
+    //Arrow 
+    album_cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return album_cell;
 }
 
@@ -43,10 +51,29 @@
     NSLog(@"cell selected");
 }
 
+//装配数据
+-(void)setupArray{
+    
+    states = [[NSMutableDictionary alloc]init];
+    
+    [states setObject:@"Lansing" forKey:@"Michigan"];
+    
+    [states setObject:@"Sacremento" forKey:@"California"];
+    
+    [states setObject:@"Albany" forKey:@"New York"];
+    
+    [states setObject:@"Phoenix" forKey:@"Arizona"];
+    
+    [states setObject:@"Tulsa" forKey:@"Oklahoma"];
+    
+    datasource = [states allKeys];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
+    [self setupArray];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
