@@ -39,7 +39,7 @@
     
     album_cell.textLabel.text = [datasource objectAtIndex:indexPath.row];
     
-    //Arrow 
+    //Arrow 样式
     album_cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return album_cell;
