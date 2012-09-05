@@ -32,7 +32,14 @@
                             <outlet property="delegate" destination="2" id="WzI-jB-oOe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="S5d-Pq-L35"/>
+                    <navigationItem key="navigationItem" id="w50-O7-BRM">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="lnq-Ol-Tbx">
+                            <connections>
+                                <segue destination="DJc-OR-6g9" kind="push" identifier="Add" id="zhd-dW-Z9e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="albumList" destination="0Vh-sd-spq" id="mbf-eR-t3o"/>
                     </connections>
@@ -62,13 +69,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gender" lineBreakMode="tailTruncation" minimumFontSize="10" id="F0G-cA-dCO">
-                                <rect key="frame" x="61" y="148" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Blog" lineBreakMode="tailTruncation" minimumFontSize="10" id="4VD-Hy-LhW">
                                 <rect key="frame" x="61" y="198" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,6 +81,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFiledReturnEditing:" destination="DJc-OR-6g9" eventType="editingDidEndOnExit" id="jnt-cX-7tg"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="sKA-KO-dIr">
                                 <rect key="frame" x="123" y="95" width="127" height="31"/>
@@ -100,10 +103,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gender" lineBreakMode="tailTruncation" minimumFontSize="10" id="aBA-tF-v8B">
+                                <rect key="frame" x="53" y="149" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3T0-xh-bPV"/>
+                    <navigationItem key="navigationItem" id="3T0-xh-bPV">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="82X-DF-XTr">
+                            <connections>
+                                <action selector="SaveClick:" destination="DJc-OR-6g9" id="Sbb-dC-v5c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Age" destination="sKA-KO-dIr" id="iCR-Om-Avs"/>
+                        <outlet property="Blog" destination="csh-bc-0TZ" id="v9i-vt-xAc"/>
+                        <outlet property="Gender" destination="76y-DX-gju" id="6fi-2F-T7m"/>
+                        <outlet property="Name" destination="P7k-Nh-Q6q" id="WCi-8H-1pc"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="916" y="19"/>
@@ -131,7 +153,11 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailController.h"/>
             <relationships>
                 <relationship kind="action" name="SaveClick:"/>
-                <relationship kind="outlet" name="Save" candidateClass="UIButton"/>
+                <relationship kind="action" name="textFiledReturnEditing:"/>
+                <relationship kind="outlet" name="Age" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Blog" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Gender" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="Name" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="ViewController" superclassName="UIViewController">
@@ -146,4 +172,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="zhd-dW-Z9e"/>
+    </inferredMetricsTieBreakers>
 </document>

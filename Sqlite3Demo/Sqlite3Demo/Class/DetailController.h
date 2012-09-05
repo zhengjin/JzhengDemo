@@ -10,8 +10,15 @@
 
 @interface DetailController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *Save;//保存按钮对象
+@property (weak, nonatomic) IBOutlet UITextField *Blog;
+@property (weak, nonatomic) IBOutlet UITextField *Gender;
+@property (weak, nonatomic) IBOutlet UITextField *Name;
+@property (weak, nonatomic) IBOutlet UITextField *Age;
+
+@property (weak) NSString *greetingText;
 
 - (IBAction)SaveClick:(id)sender;//单击事件
+
+- (IBAction)textFiledReturnEditing:(id)sender;//return释放键盘
 
 @end

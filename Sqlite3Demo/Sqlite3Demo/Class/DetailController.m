@@ -10,10 +10,18 @@
 
 @implementation DetailController
 
-@synthesize Save;
+@synthesize Blog;
+@synthesize Gender;
+@synthesize Name;
+@synthesize Age;
+
+@synthesize greetingText;
 
 - (void)viewDidUnload {
-    [self setSave:nil];
+    [self setName:nil];
+    [self setAge:nil];
+    [self setGender:nil];
+    [self setBlog:nil];
     [super viewDidUnload];
 }
 
@@ -28,6 +36,20 @@
                           otherButtonTitles:@"OK",nil];
     [alert show];
 
+}
+
+//单击return
+-(IBAction)textFiledReturnEditing:(id)sender {
+    [sender resignFirstResponder];
+    NSLog(@"触发Did End On Exit");
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
+    Blog.text=self.greetingText;
 }
 
 @end

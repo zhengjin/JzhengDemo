@@ -11,19 +11,20 @@
 @implementation ViewController
 
 @synthesize states,datasource;
-@synthesize albumList = _albumList;
+@synthesize albumList;
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
-}
+#pragma mark SetTableView
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //控制列表数量
     // Return the number of rows in the section.
     return 5;
+}
+
+//每个section显示的标题
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return @"SetChildTitle";
 }
 
 //绑定数据
@@ -42,6 +43,7 @@
     //Arrow 样式
     album_cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    
     return album_cell;
 }
 
@@ -51,19 +53,21 @@
     NSLog(@"cell selected");
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id segue2=segue.destinationViewController;
+    [segue2 setValue:@"sd" forKey:@"greetingText"];
+    NSLog(@"点击设置");
+}
+
 //装配数据
 -(void)setupArray{
-    
     states = [[NSMutableDictionary alloc]init];
     
     [states setObject:@"Lansing" forKey:@"Michigan"];
-    
     [states setObject:@"Sacremento" forKey:@"California"];
-    
     [states setObject:@"Albany" forKey:@"New York"];
-    
     [states setObject:@"Phoenix" forKey:@"Arizona"];
-    
     [states setObject:@"Tulsa" forKey:@"Oklahoma"];
     
     datasource = [states allKeys];
@@ -71,11 +75,18 @@
 
 #pragma mark - View lifecycle
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Release any cached data, images, etc that aren't in use.
+}
+
 - (void)viewDidLoad
 {
     [self setupArray];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
 }
 
 - (void)viewDidUnload
