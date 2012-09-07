@@ -30,10 +30,10 @@
     
     //弹出alter
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" 
-                          message:@"单击了动态按钮！"
+                          message:@"是否保存！"
                           delegate:self
                           cancelButtonTitle:@"确定"
-                          otherButtonTitles:@"OK",nil];
+                          otherButtonTitles:@"取消",nil];
     [alert show];
 
 }
