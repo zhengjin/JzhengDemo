@@ -16,6 +16,7 @@
 		ACF561CC16049D1E00E5CB2D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF561CA16049D1E00E5CB2D /* MainStoryboard.storyboard */; };
 		ACF561CF16049D1E00E5CB2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF561CE16049D1E00E5CB2D /* ViewController.m */; };
 		ACF561E316049F5F00E5CB2D /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF561E216049F5F00E5CB2D /* Player.m */; };
+		ACF561EB1604B68400E5CB2D /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF561EA1604B68400E5CB2D /* TableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		ACF561CE16049D1E00E5CB2D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = sqliteDemo/ViewController.m; sourceTree = "<group>"; };
 		ACF561E116049F5F00E5CB2D /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = sqliteDemo/Class/Player.h; sourceTree = "<group>"; };
 		ACF561E216049F5F00E5CB2D /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = sqliteDemo/Class/Player.m; sourceTree = "<group>"; };
+		ACF561E91604B68400E5CB2D /* TableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableCell.h; path = sqliteDemo/Class/TableCell.h; sourceTree = "<group>"; };
+		ACF561EA1604B68400E5CB2D /* TableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableCell.m; path = sqliteDemo/Class/TableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		ACF561D516049D2500E5CB2D /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				ACF561E41604B4DC00E5CB2D /* Table */,
 				ACF561E016049F2F00E5CB2D /* Entity */,
 				ACF561D616049D3300E5CB2D /* ViewController */,
 			);
@@ -133,6 +137,15 @@
 				ACF561E216049F5F00E5CB2D /* Player.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		ACF561E41604B4DC00E5CB2D /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				ACF561E91604B68400E5CB2D /* TableCell.h */,
+				ACF561EA1604B68400E5CB2D /* TableCell.m */,
+			);
+			name = Table;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +215,7 @@
 				ACF561C916049D1E00E5CB2D /* AppDelegate.m in Sources */,
 				ACF561CF16049D1E00E5CB2D /* ViewController.m in Sources */,
 				ACF561E316049F5F00E5CB2D /* Player.m in Sources */,
+				ACF561EB1604B68400E5CB2D /* TableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
