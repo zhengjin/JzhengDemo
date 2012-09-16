@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACDDD8BF1606155900003C5F /* PeopleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDDD8BE1606155900003C5F /* PeopleDetailController.m */; };
 		ACF561B916049D1E00E5CB2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF561B816049D1E00E5CB2D /* UIKit.framework */; };
 		ACF561BB16049D1E00E5CB2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF561BA16049D1E00E5CB2D /* Foundation.framework */; };
 		ACF561BD16049D1E00E5CB2D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF561BC16049D1E00E5CB2D /* CoreGraphics.framework */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ACDDD8BD1606155900003C5F /* PeopleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleDetailController.h; path = sqliteDemo/Class/PeopleDetailController.h; sourceTree = "<group>"; };
+		ACDDD8BE1606155900003C5F /* PeopleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleDetailController.m; path = sqliteDemo/Class/PeopleDetailController.m; sourceTree = "<group>"; };
 		ACF561B416049D1E00E5CB2D /* sqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF561B816049D1E00E5CB2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ACF561BA16049D1E00E5CB2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,8 @@
 			children = (
 				ACF561CD16049D1E00E5CB2D /* ViewController.h */,
 				ACF561CE16049D1E00E5CB2D /* ViewController.m */,
+				ACDDD8BD1606155900003C5F /* PeopleDetailController.h */,
+				ACDDD8BE1606155900003C5F /* PeopleDetailController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				ACF561CF16049D1E00E5CB2D /* ViewController.m in Sources */,
 				ACF561E316049F5F00E5CB2D /* Player.m in Sources */,
 				ACF561EB1604B68400E5CB2D /* TableCell.m in Sources */,
+				ACDDD8BF1606155900003C5F /* PeopleDetailController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +333,7 @@
 				ACF561D416049D1E00E5CB2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -103,8 +103,8 @@
         <scene sceneID="2Ry-6b-7A4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61S-JQ-DTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="YY7-Wa-qC8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FwK-De-BT6" customClass="TableCell">
+                <viewController id="YY7-Wa-qC8" customClass="PeopleDetailController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FwK-De-BT6" customClass="UITableView">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -167,6 +167,12 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="eVP-bS-dCf"/>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="z4M-mz-Lwq"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="age" destination="myg-SK-S6T" id="yqS-bq-74j"/>
+                        <outlet property="blog" destination="qC3-eS-vKx" id="p23-Jn-dJR"/>
+                        <outlet property="gender" destination="1go-OU-sPm" id="Cxy-Dv-OLT"/>
+                        <outlet property="name" destination="fSG-lI-Yfg" id="cwP-7H-cTh"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1345" y="394"/>
@@ -186,17 +192,6 @@
             <point key="canvasLocation" x="939" y="394"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="TableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TableCell.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="PeopleTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

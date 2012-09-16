@@ -55,7 +55,7 @@
 
 #pragma mark - View lifecycle
 
--(void)BindingDataSource
+- (void)BindingDataSource
 {
     peopleList = [NSMutableArray arrayWithCapacity:20];
     
