@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Player.h"
+#import "PeopleDetailController.h"
 
 @implementation ViewController
 
@@ -117,6 +118,38 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"AddPlayer"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        PeopleDetailController *playerDetailsViewController =
+        [[navigationController viewControllers] objectAtIndex:0];
+        playerDetailsViewController.delegate = (id)self;
+    }
+}
+
+#pragma mark - PlayerDetailsViewControllerDelegate
+
+- (void)playerDetailsViewControllerDidCancel:(PeopleDetailController *)controller
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)playerDetailsViewController:(PeopleDetailController *)controller didAddPlayer:(Player *)player
+{
+	if(![player.name isEqualToString:@""])
+    {
+        [self.peopleList addObject:player];
+        
+        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[self.peopleList count] - 1 inSection:0];
+        [self.PeopleTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

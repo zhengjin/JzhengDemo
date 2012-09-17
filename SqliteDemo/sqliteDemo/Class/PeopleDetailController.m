@@ -7,13 +7,15 @@
 //
 
 #import "PeopleDetailController.h"
-
+#import "Player.h"
 
 @implementation PeopleDetailController
-@synthesize name;
-@synthesize age;
-@synthesize gender;
-@synthesize blog;
+@synthesize txtName;
+@synthesize txtAge;
+@synthesize txtGender;
+@synthesize txtBlog1;
+
+@synthesize delegate;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +34,19 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(IBAction)cancel:(id)sender
+{
+    [self.delegate playerDetailsViewControllerDidCancel:self];
+}
+
+-(IBAction)done:(id)sender
+{
+    Player *player =[[Player alloc] init];
+    player.name = self.txtName.text;
+    player.rating =1;
+    [self.delegate playerDetailsViewController:self didAddPlayer:player];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -47,10 +62,10 @@
 
 - (void)viewDidUnload
 {
-    [self setName:nil];
-    [self setAge:nil];
-    [self setGender:nil];
-    [self setBlog:nil];
+    [self setTxtName:nil];
+    [self setTxtAge:nil];
+    [self setTxtGender:nil];
+    [self setTxtBlog1:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -86,15 +101,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
+{    // Return the number of rows in the section.
     return 0;
 }
 

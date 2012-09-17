@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" title="Title" id="Ciu-ME-4b5">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="9UJ-9W-esZ">
                             <connections>
-                                <segue destination="f07-bc-C4o" kind="modal" id="laV-dh-dvi"/>
+                                <segue destination="f07-bc-C4o" kind="modal" identifier="AddPlayer" id="laV-dh-dvi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -164,14 +164,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="qp8-sI-TvT">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="eVP-bS-dCf"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="z4M-mz-Lwq"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="eVP-bS-dCf">
+                            <connections>
+                                <action selector="cancel:" destination="YY7-Wa-qC8" id="TPC-aw-WUL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="z4M-mz-Lwq">
+                            <connections>
+                                <action selector="done:" destination="YY7-Wa-qC8" id="FeR-qB-al5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="age" destination="myg-SK-S6T" id="yqS-bq-74j"/>
-                        <outlet property="blog" destination="qC3-eS-vKx" id="p23-Jn-dJR"/>
-                        <outlet property="gender" destination="1go-OU-sPm" id="Cxy-Dv-OLT"/>
-                        <outlet property="name" destination="fSG-lI-Yfg" id="cwP-7H-cTh"/>
+                        <outlet property="txtAge" destination="myg-SK-S6T" id="EUS-ww-f0H"/>
+                        <outlet property="txtBlog1" destination="qC3-eS-vKx" id="2ab-aK-thx"/>
+                        <outlet property="txtGender" destination="1go-OU-sPm" id="ggv-gD-0N2"/>
+                        <outlet property="txtName" destination="fSG-lI-Yfg" id="kYK-9m-Rnj"/>
                     </connections>
                 </viewController>
             </objects>
@@ -192,6 +200,25 @@
             <point key="canvasLocation" x="939" y="394"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="PeopleDetailController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PeopleDetailController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="txtAge" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtBlog1" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtGender" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="PeopleTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
