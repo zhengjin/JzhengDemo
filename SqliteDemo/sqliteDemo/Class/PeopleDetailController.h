@@ -14,7 +14,8 @@
 @protocol PeopleDetailsViewControllerDelegate <NSObject>
 
 - (void)playerDetailsViewControllerDidCancel:(PeopleDetailController *)controller;
-- (void)playerDetailsViewController:(PeopleDetailController *)controller didAddPlayer:(Player *)player;
+- (void)playerDetailsViewController:
+    (PeopleDetailController *)controller didAddPlayer:(Player *)player;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC21D7101608BA5C007354DE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC21D70F1608BA5C007354DE /* libsqlite3.0.dylib */; };
 		ACDDD8BF1606155900003C5F /* PeopleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDDD8BE1606155900003C5F /* PeopleDetailController.m */; };
 		ACF561B916049D1E00E5CB2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF561B816049D1E00E5CB2D /* UIKit.framework */; };
 		ACF561BB16049D1E00E5CB2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF561BA16049D1E00E5CB2D /* Foundation.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC21D70F1608BA5C007354DE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		ACDDD8BD1606155900003C5F /* PeopleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleDetailController.h; path = sqliteDemo/Class/PeopleDetailController.h; sourceTree = "<group>"; };
 		ACDDD8BE1606155900003C5F /* PeopleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleDetailController.m; path = sqliteDemo/Class/PeopleDetailController.m; sourceTree = "<group>"; };
 		ACF561B416049D1E00E5CB2D /* sqliteDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sqliteDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC21D7101608BA5C007354DE /* libsqlite3.0.dylib in Frameworks */,
 				ACF561B916049D1E00E5CB2D /* UIKit.framework in Frameworks */,
 				ACF561BB16049D1E00E5CB2D /* Foundation.framework in Frameworks */,
 				ACF561BD16049D1E00E5CB2D /* CoreGraphics.framework in Frameworks */,
@@ -77,6 +80,7 @@
 		ACF561B716049D1E00E5CB2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC21D70F1608BA5C007354DE /* libsqlite3.0.dylib */,
 				ACF561B816049D1E00E5CB2D /* UIKit.framework */,
 				ACF561BA16049D1E00E5CB2D /* Foundation.framework */,
 				ACF561BC16049D1E00E5CB2D /* CoreGraphics.framework */,

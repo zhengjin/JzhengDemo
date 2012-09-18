@@ -38,8 +38,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cell_identifier = @"Cell";
-    UITableViewCell *album_cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cell_identifier];
-    if (album_cell == nil) {
+    UITableViewCell *album_cell = 
+     (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cell_identifier];
+    if (album_cell == nil) 
+    {
         album_cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cell_identifier];
     }
     [[album_cell textLabel] setBackgroundColor:[UIColor clearColor]];
@@ -140,13 +142,15 @@
 
 - (void)playerDetailsViewController:(PeopleDetailController *)controller didAddPlayer:(Player *)player
 {
-	if(![player.name isEqualToString:@""])
+	if(player.name.length!=0)
     {
         [self.peopleList addObject:player];
         
-        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[self.peopleList count] - 1 inSection:0];
-        [self.PeopleTableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        NSIndexPath* indexPath = 
+        [NSIndexPath indexPathForRow:[self.peopleList count] - 1 inSection:0];
         
+        [self.PeopleTableView insertRowsAtIndexPaths:
+         [NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
