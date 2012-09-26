@@ -15,8 +15,8 @@
 @property (nonatomic,strong) NSMutableArray *peopleList;
 
 - (void)BindingDataSource;
+- (void)BindingDataFromSqlite;
 
 #pragma mark - add delegate
-
 
 @end

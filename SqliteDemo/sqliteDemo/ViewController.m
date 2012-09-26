@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Player.h"
 #import "PeopleDetailController.h"
+#import "DBHelper.h"
 
 @implementation ViewController
 
@@ -79,6 +80,22 @@
 	player.game = @"篮球";
 	player.rating = 3;
 	[peopleList addObject:player];
+    
+    [self BindingDataFromSqlite];
+    
+}
+
+- (void)BindingDataFromSqlite
+{
+    DBHelper *dbHelper = [DBHelper newInstance];
+    NSString *sql = @"SELECT customer.pid, customer.first_name, customer.last_name FROM customer";
+    sqlite3_stmt *statement = [dbHelper executeQuery:sql];
+    while(sqlite3_step(statement) == SQLITE_ROW){
+        int pid = sqlite3_column_int(statement, 0);
+        NSString *firstName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+        NSString *lastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
+        NSLog(@"pid: %i, first name: %@, last name: %@", pid, firstName, lastName);
+    }
 }
 
 - (void)viewDidLoad
