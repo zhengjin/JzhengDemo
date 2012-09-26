@@ -44,10 +44,14 @@ NSString *DB_EXT = @".sqlite";
 
 - (void) openDatabase{
     if (!database){
-        [self copyDatabaseIfNeeded];
+        [self createDatabaseIfNeeded];
         int result = sqlite3_open([[self getDatabaseFullPath] UTF8String], &database);
         if (result != SQLITE_OK){
             NSAssert(0, @"Failed to open database");
+        }
+        else
+        {
+            [self createtable];
         }
     }
 }
@@ -58,22 +62,31 @@ NSString *DB_EXT = @".sqlite";
     }
 }
 
-- (void) copyDatabaseIfNeeded{
+- (void) createDatabaseIfNeeded{
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error;
+    //NSError *error;
     NSString *dbPath = [self getDatabaseFullPath];
     BOOL success = [fileManager fileExistsAtPath:dbPath];
     if(!success) {
-        NSString *defaultDBPath = 
-            [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@%@", DB_NAME, DB_EXT]];
-        success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
-        NSLog(@"Database file copied from bundle to %@", dbPath);
-        if (!success){
-            NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
-        }
+        //create file
+//        NSFileManager *fm=[NSFileManager defaultManager];
+//        NSString *defaultDBPath = 
+//            [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@%@", DB_NAME, DB_EXT]];
+//        success = [fm copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
+//        NSLog(@"Database file copied from bundle to %@", dbPath);
+//        if (!success){
+//            NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+//        }
     } else {
         NSLog(@"Database file found at path %@", dbPath);
     }
+}
+
+- (void)createtable
+{
+    NSArray *myArray=[NSArray arrayWithObjects:@"name", @"blog", @"sex", nil];
+    [self performSelector:
+     @selector(createTable:WithFields:) withObject:[NSString stringWithFormat:@"%@",DB_NAME] withObject:myArray];
 }
 
 - (void)createTable:(NSString *)name WithFields:(NSArray *)fields
@@ -91,11 +104,11 @@ NSString *DB_EXT = @".sqlite";
         cmd = [NSString stringWithFormat:@"%@ , '%@' TEXT", cmd, [fields objectAtIndex:i]];
     }
     
-    cmd = [NSString stringWithFormat:@"%@)", cmd];
-    
+    cmd = [NSString stringWithFormat:@"%@);", cmd];
+
     if(sqlite3_exec(database, [cmd UTF8String], NULL, NULL, &err) != SQLITE_OK) {
         sqlite3_close(database);
-        NSLog([NSString stringWithFormat:@"Failed to create table with command: %@"], cmd);
+        NSLog(@"Failed to create table with command: %@", cmd);
     }
 }
 
