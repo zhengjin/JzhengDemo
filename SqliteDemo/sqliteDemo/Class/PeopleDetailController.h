@@ -31,4 +31,6 @@
 - (IBAction)cancel:(id)sender;
 - (IBAction)done:(id)sender;
 
+- (void)InserData:(NSString *)name;
+
 @end

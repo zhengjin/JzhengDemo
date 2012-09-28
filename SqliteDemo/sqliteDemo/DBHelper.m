@@ -84,7 +84,7 @@ NSString *DB_EXT = @".sqlite";
 
 - (void)createtable
 {
-    NSArray *myArray=[NSArray arrayWithObjects:@"name", @"blog", @"sex", nil];
+    NSArray *myArray=[NSArray arrayWithObjects:@"id", @"name", @"age", @"gender", @"blog", nil];
     [self performSelector:
      @selector(createTable:WithFields:) withObject:[NSString stringWithFormat:@"%@",DB_NAME] withObject:myArray];
 }
@@ -98,7 +98,7 @@ NSString *DB_EXT = @".sqlite";
     
     char *err;
     
-    NSString *cmd = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' TEXT PRIMARY KEY", name, [fields objectAtIndex:0]];
+    NSString *cmd = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@'('%@' integer PRIMARY KEY autoincrement", name, [fields objectAtIndex:0]];
     
     for(NSInteger i = 1 ; i < [fields count] ; i++) {
         cmd = [NSString stringWithFormat:@"%@ , '%@' TEXT", cmd, [fields objectAtIndex:i]];
@@ -149,6 +149,7 @@ NSString *DB_EXT = @".sqlite";
     sqlite3_finalize(stmt);
 }
 
+//获取数据库地址
 - (NSString *) getDatabaseFullPath{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];

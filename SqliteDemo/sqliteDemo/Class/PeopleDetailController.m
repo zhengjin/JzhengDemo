@@ -8,8 +8,12 @@
 
 #import "PeopleDetailController.h"
 #import "Player.h"
+#import "DBHelper.h"
 
 @implementation PeopleDetailController
+{
+    
+}
 @synthesize txtName;
 @synthesize txtAge;
 @synthesize txtGender;
@@ -34,18 +38,31 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(IBAction)cancel:(id)sender
+- (IBAction)cancel:(id)sender
 {
     [self.delegate playerDetailsViewControllerDidCancel:self];
 }
 
--(IBAction)done:(id)sender
+- (IBAction)done:(id)sender
 {
     Player *player =[[Player alloc] init];
     player.name = self.txtName.text;
     player.rating =1;
+    [self InserData:self.txtName.text];
     [self.delegate playerDetailsViewController:self didAddPlayer:player];
 }
+
+- (void) InserData:(NSString *)name
+{
+    DBHelper *dbHelper = [DBHelper newInstance];
+    
+    NSString *insertSql=@"insert into sample (name) values ('12')";    
+    sqlite3_stmt *statement = [dbHelper executeQuery:insertSql];
+    while(sqlite3_step(statement) == SQLITE_ROW){
+        NSLog(@"insert name: %@ successful", name);
+    }
+    
+    [[DBHelper newInstance] closeDatabase];}
 
 #pragma mark - View lifecycle
 

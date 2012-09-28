@@ -88,7 +88,7 @@
 - (void)BindingDataFromSqlite
 {
     DBHelper *dbHelper = [DBHelper newInstance];
-    NSString *sql = @"SELECT customer.pid, customer.first_name, customer.last_name FROM customer";
+    NSString *sql = @"SELECT id,name FROM simple";
     sqlite3_stmt *statement = [dbHelper executeQuery:sql];
     while(sqlite3_step(statement) == SQLITE_ROW){
         int pid = sqlite3_column_int(statement, 0);
@@ -96,6 +96,8 @@
         NSString *lastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
         NSLog(@"pid: %i, first name: %@, last name: %@", pid, firstName, lastName);
     }
+    
+    [[DBHelper newInstance] closeDatabase];
 }
 
 - (void)viewDidLoad
