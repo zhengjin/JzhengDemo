@@ -56,11 +56,11 @@
 {
     DBHelper *dbHelper = [DBHelper newInstance];
     
-    NSString *insertSql=@"insert into sample (name) values ('12')";    
-    sqlite3_stmt *statement = [dbHelper executeQuery:insertSql];
-    while(sqlite3_step(statement) == SQLITE_ROW){
-        NSLog(@"insert name: %@ successful", name);
-    }
+//    NSString *insertSql=@"insert into sample (name) values ('12')";    
+//    sqlite3_stmt *statement = [dbHelper executeQuery:insertSql];
+//    while(sqlite3_step(statement) == SQLITE_ROW){
+//        NSLog(@"insert name: %@ successful", name);
+//    }
     
     [[DBHelper newInstance] closeDatabase];}
 

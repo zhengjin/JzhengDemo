@@ -88,16 +88,17 @@
 - (void)BindingDataFromSqlite
 {
     DBHelper *dbHelper = [DBHelper newInstance];
-    NSString *sql = @"SELECT id,name FROM simple";
-    sqlite3_stmt *statement = [dbHelper executeQuery:sql];
-    while(sqlite3_step(statement) == SQLITE_ROW){
-        int pid = sqlite3_column_int(statement, 0);
-        NSString *firstName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
-        NSString *lastName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
-        NSLog(@"pid: %i, first name: %@, last name: %@", pid, firstName, lastName);
-    }
     
+    NSArray *arrObj;
+    NSString *sql=@"sample";
+    arrObj=[dbHelper selectFrom:sql];
     [[DBHelper newInstance] closeDatabase];
+    
+    for (NSArray *item in arrObj) {
+        Player *player = [[Player alloc] init];
+        player.name=[item objectAtIndex:1];
+        [peopleList addObject:player];
+    }
 }
 
 - (void)viewDidLoad
@@ -166,10 +167,10 @@
         [self.peopleList addObject:player];
         
         NSIndexPath* indexPath = 
-        [NSIndexPath indexPathForRow:[self.peopleList count] - 1 inSection:0];
+            [NSIndexPath indexPathForRow:[self.peopleList count] - 1 inSection:0];
         
         [self.PeopleTableView insertRowsAtIndexPaths:
-         [NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            [NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

@@ -150,17 +150,12 @@ NSString *DB_EXT = @".sqlite";
 }
 
 //获取数据库地址
-- (NSString *) getDatabaseFullPath{
+- (NSString *) getDatabaseFullPath
+{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@%@", DB_NAME, DB_EXT]];
     return path;
-}
-
-- (sqlite3_stmt *) executeQuery:(NSString *) query{
-    sqlite3_stmt *statement;
-    sqlite3_prepare_v2(database, [query UTF8String], -1, &statement, nil);
-    return statement;
 }
 
 - (NSArray*)selectFrom:(NSString *)table
@@ -181,7 +176,7 @@ NSString *DB_EXT = @".sqlite";
                 char *field = (char*) sqlite3_column_text(stmt, i);
                 
                 if(field == NULL) {
-                    [row addObject:nil];
+                    //[row addObject:nil];
                     continue;
                 }
                 

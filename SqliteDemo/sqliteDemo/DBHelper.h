@@ -22,7 +22,6 @@
 - (void) closeDatabase;
 - (NSString *) getDatabaseFullPath;
 - (void) createDatabaseIfNeeded;
-- (sqlite3_stmt *) executeQuery:(NSString *) query;
 
 - (void)createtable;
 - (void)createTable:(NSString*)name WithFields:(NSArray*)fields;
