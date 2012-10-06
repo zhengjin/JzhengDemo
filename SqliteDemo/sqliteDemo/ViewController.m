@@ -89,9 +89,8 @@
 {
     DBHelper *dbHelper = [DBHelper newInstance];
     
-    NSArray *arrObj;
     NSString *sql=@"sample";
-    arrObj=[dbHelper selectFrom:sql];
+    NSArray *arrObj=[dbHelper selectFrom:sql];
     [[DBHelper newInstance] closeDatabase];
     
     for (NSArray *item in arrObj) {

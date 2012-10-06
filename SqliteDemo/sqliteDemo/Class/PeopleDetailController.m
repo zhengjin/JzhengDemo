@@ -11,9 +11,7 @@
 #import "DBHelper.h"
 
 @implementation PeopleDetailController
-{
-    
-}
+
 @synthesize txtName;
 @synthesize txtAge;
 @synthesize txtGender;
@@ -47,22 +45,21 @@
 {
     Player *player =[[Player alloc] init];
     player.name = self.txtName.text;
+    player.game = self.txtAge.text;
     player.rating =1;
-    [self InserData:self.txtName.text];
+    [self InserData:player];
     [self.delegate playerDetailsViewController:self didAddPlayer:player];
 }
 
-- (void) InserData:(NSString *)name
+- (void) InserData:(Player *)player
 {
     DBHelper *dbHelper = [DBHelper newInstance];
     
-//    NSString *insertSql=@"insert into sample (name) values ('12')";    
-//    sqlite3_stmt *statement = [dbHelper executeQuery:insertSql];
-//    while(sqlite3_step(statement) == SQLITE_ROW){
-//        NSLog(@"insert name: %@ successful", name);
-//    }
-    
-    [[DBHelper newInstance] closeDatabase];}
+    NSArray *fields=[NSArray arrayWithObjects:@"name", @"age", @"gender", @"blog", nil];
+    NSArray *values=[NSArray arrayWithObjects:player.name, player.game, @"test", @"blog1", nil];
+    [dbHelper insertInto:@"sample" Fields:fields Values:values];
+    [[DBHelper newInstance] closeDatabase];
+}
 
 #pragma mark - View lifecycle
 

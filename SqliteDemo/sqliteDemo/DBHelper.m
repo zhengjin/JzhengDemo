@@ -17,7 +17,8 @@ NSString *DB_EXT = @".sqlite";
 
 @synthesize database;
 
-+ (DBHelper *) newInstance{
++ (DBHelper *) newInstance
+{
     @synchronized(self) {
         if (instance == nil){
             instance = [[DBHelper alloc]init];
@@ -27,7 +28,8 @@ NSString *DB_EXT = @".sqlite";
     return instance;
 }
 
-+ (id)allocWithZone:(NSZone *)zone {
++ (id)allocWithZone:(NSZone *)zone 
+{
     @synchronized(self) {
         if (instance == nil) {
             instance = [super allocWithZone:zone];
@@ -42,7 +44,8 @@ NSString *DB_EXT = @".sqlite";
     return self;
 }
 
-- (void) openDatabase{
+- (void) openDatabase
+{
     if (!database){
         [self createDatabaseIfNeeded];
         int result = sqlite3_open([[self getDatabaseFullPath] UTF8String], &database);
@@ -56,13 +59,15 @@ NSString *DB_EXT = @".sqlite";
     }
 }
 
-- (void) closeDatabase{
+- (void) closeDatabase
+{
     if (database){
         sqlite3_close(database);
     }
 }
 
-- (void) createDatabaseIfNeeded{
+- (void) createDatabaseIfNeeded
+{
     NSFileManager *fileManager = [NSFileManager defaultManager];
     //NSError *error;
     NSString *dbPath = [self getDatabaseFullPath];
