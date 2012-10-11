@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC7A40271625A15E0017A344 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7A40261625A15E0017A344 /* Icon-Small@2x.png */; };
 		ACDC55EB16245FFB004B8EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EA16245FFB004B8EB8 /* QuartzCore.framework */; };
 		ACDC55ED16245FFB004B8EB8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EC16245FFB004B8EB8 /* OpenGLES.framework */; };
 		ACDC55EF16245FFB004B8EB8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EE16245FFB004B8EB8 /* OpenAL.framework */; };
@@ -141,6 +142,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC7A40261625A15E0017A344 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Graphics/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		ACDC55E616245FFB004B8EB8 /* Cocos2dDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2dDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDC55EA16245FFB004B8EB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACDC55EC16245FFB004B8EB8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -877,6 +879,7 @@
 		ACDC5797162468C6004B8EB8 /* Graphics */ = {
 			isa = PBXGroup;
 			children = (
+				AC7A40261625A15E0017A344 /* Icon-Small@2x.png */,
 			);
 			name = Graphics;
 			sourceTree = "<group>";
@@ -947,6 +950,7 @@
 				ACDC561716245FFB004B8EB8 /* Icon@2x.png in Resources */,
 				ACDC561A16245FFB004B8EB8 /* iTunesArtwork in Resources */,
 				ACDC576316245FFE004B8EB8 /* ChangeLog in Resources */,
+				AC7A40271625A15E0017A344 /* Icon-Small@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1167,6 +1171,7 @@
 				ACDC579016245FFE004B8EB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
