@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC7A40271625A15E0017A344 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7A40261625A15E0017A344 /* Icon-Small@2x.png */; };
+		AC97D0D1162D9E91005BC419 /* GameBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC97D0D0162D9E91005BC419 /* GameBoardView.m */; };
 		ACDC55EB16245FFB004B8EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EA16245FFB004B8EB8 /* QuartzCore.framework */; };
 		ACDC55ED16245FFB004B8EB8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EC16245FFB004B8EB8 /* OpenGLES.framework */; };
 		ACDC55EF16245FFB004B8EB8 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EE16245FFB004B8EB8 /* OpenAL.framework */; };
@@ -143,6 +144,8 @@
 
 /* Begin PBXFileReference section */
 		AC7A40261625A15E0017A344 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Graphics/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		AC97D0CF162D9E91005BC419 /* GameBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = GameBoardView.h; path = Class/View/GameBoardView.h; sourceTree = "<group>"; };
+		AC97D0D0162D9E91005BC419 /* GameBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameBoardView.m; path = Class/View/GameBoardView.m; sourceTree = "<group>"; };
 		ACDC55E616245FFB004B8EB8 /* Cocos2dDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2dDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDC55EA16245FFB004B8EB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		ACDC55EC16245FFB004B8EB8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -437,6 +440,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC617010162ACAC600AF6AD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC97D0CF162D9E91005BC419 /* GameBoardView.h */,
+				AC97D0D0162D9E91005BC419 /* GameBoardView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AC617012162ACADF00AF6AD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AC617013162ACB6200AF6AD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		ACDC55DB16245FFB004B8EB8 = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +499,9 @@
 		ACDC55FC16245FFB004B8EB8 /* Cocos2dDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AC617013162ACB6200AF6AD3 /* Model */,
+				AC617012162ACADF00AF6AD3 /* Controller */,
+				AC617010162ACAC600AF6AD3 /* View */,
 				ACDC578616245FFE004B8EB8 /* HelloWorldLayer.h */,
 				ACDC578716245FFE004B8EB8 /* HelloWorldLayer.m */,
 				ACDC578916245FFE004B8EB8 /* IntroLayer.h */,
@@ -1068,6 +1097,7 @@
 				ACDC578516245FFE004B8EB8 /* AppDelegate.m in Sources */,
 				ACDC578816245FFE004B8EB8 /* HelloWorldLayer.m in Sources */,
 				ACDC578B16245FFE004B8EB8 /* IntroLayer.m in Sources */,
+				AC97D0D1162D9E91005BC419 /* GameBoardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
