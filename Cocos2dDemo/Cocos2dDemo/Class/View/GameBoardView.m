@@ -15,7 +15,15 @@
     if((self=[self init]))
     {
         //创建初始化显示层
-        CC
+        CCLabelTTF *label=[CCLabelTTF labelWithString:@"hello word from view" fontName:@"marker felt" fontSize:48];
+        
+        //获取屏幕尺寸
+        CGSize size=[[CCDirector sharedDirector] winSize];
+        
+        //获取屏幕中点
+        label.position=ccp(size.width/2, size.height/2);
+        
+        [self addChild:label];
     }
     return self;
 }
