@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6F2072162EDD2600973B7E /* GameBoardController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6F2071162EDD2600973B7E /* GameBoardController.m */; };
 		AC7A40271625A15E0017A344 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC7A40261625A15E0017A344 /* Icon-Small@2x.png */; };
 		AC97D0D1162D9E91005BC419 /* GameBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC97D0D0162D9E91005BC419 /* GameBoardView.m */; };
 		ACDC55EB16245FFB004B8EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDC55EA16245FFB004B8EB8 /* QuartzCore.framework */; };
@@ -143,8 +144,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC6F2070162EDD2600973B7E /* GameBoardController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = GameBoardController.h; path = Class/Controller/GameBoardController.h; sourceTree = "<group>"; };
+		AC6F2071162EDD2600973B7E /* GameBoardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameBoardController.m; path = Class/Controller/GameBoardController.m; sourceTree = "<group>"; };
 		AC7A40261625A15E0017A344 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Graphics/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		AC97D0CF162D9E91005BC419 /* GameBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; name = GameBoardView.h; path = Class/View/GameBoardView.h; sourceTree = "<group>"; };
+		AC97D0CF162D9E91005BC419 /* GameBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameBoardView.h; path = Class/View/GameBoardView.h; sourceTree = "<group>"; };
 		AC97D0D0162D9E91005BC419 /* GameBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameBoardView.m; path = Class/View/GameBoardView.m; sourceTree = "<group>"; };
 		ACDC55E616245FFB004B8EB8 /* Cocos2dDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cocos2dDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDC55EA16245FFB004B8EB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -452,6 +455,8 @@
 		AC617012162ACADF00AF6AD3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AC6F2070162EDD2600973B7E /* GameBoardController.h */,
+				AC6F2071162EDD2600973B7E /* GameBoardController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1098,6 +1103,7 @@
 				ACDC578816245FFE004B8EB8 /* HelloWorldLayer.m in Sources */,
 				ACDC578B16245FFE004B8EB8 /* IntroLayer.m in Sources */,
 				AC97D0D1162D9E91005BC419 /* GameBoardView.m in Sources */,
+				AC6F2072162EDD2600973B7E /* GameBoardController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 @implementation GameBoardView
 
 -(id) init{
-    if((self=[self init]))
+    if(self=[super init])
     {
         //创建初始化显示层
         CCLabelTTF *label=[CCLabelTTF labelWithString:@"hello word from view" fontName:@"marker felt" fontSize:48];
