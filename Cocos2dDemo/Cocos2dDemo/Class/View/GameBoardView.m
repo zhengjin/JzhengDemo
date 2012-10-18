@@ -11,6 +11,8 @@
 
 @implementation GameBoardView
 
+@synthesize gameBoard;
+
 -(id) init{
     if(self=[super init])
     {
@@ -25,6 +27,11 @@
         
         [self addChild:label];
     }
+    return self;
+}
+
+-(id) initWithGameBoard:(GameBoard *)aGameBoard
+{
     return self;
 }
 

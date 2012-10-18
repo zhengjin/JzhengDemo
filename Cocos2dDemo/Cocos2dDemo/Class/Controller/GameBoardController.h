@@ -15,6 +15,4 @@
     GameBoardView *view;
 }
 
--(id) init;
-
 @end

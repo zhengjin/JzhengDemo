@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface GameBoardView : CCNode {
-    
+#import "GameBoard.h"
+
+@interface GameBoardView : CCLayer {
+    GameBoard *gameBoard;
 }
 
--(id) init;
+@property (nonatomic,retain) GameBoard *gameBoard;
+
+-(id) initWithGameBoard:(GameBoard *)aGameBoard;
 
 @end
