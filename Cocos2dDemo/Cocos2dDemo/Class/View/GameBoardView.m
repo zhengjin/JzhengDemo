@@ -35,4 +35,9 @@
     return self;
 }
 
+-(id) initWithGameBoard:(GameBoard *)aGameBoard delegate:(id)aDelegate
+{
+    return self;
+}
+
 @end

@@ -17,6 +17,7 @@
 
 @property (nonatomic,retain) GameBoard *gameBoard;
 
--(id) initWithGameBoard:(GameBoard *)aGameBoard;
+-(id)initWithGameBoard:(GameBoard *)aGameBoard;
+-(id)initWithGameBoard:(GameBoard *)aGameBoard delegate:(id)aDelegate;
 
 @end
