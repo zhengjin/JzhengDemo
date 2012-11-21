@@ -11,7 +11,7 @@
 
 #import "GameBoardView.h"
 
-@interface GameBoardController : CCNode {
+@interface GameBoardController : CCNode<GameBoardViewDelegate> {
     GameBoardView *view;
 }
 

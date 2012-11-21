@@ -11,6 +11,10 @@
 
 #import "GameBoard.h"
 
+@protocol GameBoardViewDelegate
+- (void)gameBoard:(GameBoard *)gameBoard touchedAtRow:(int)row column:(int)column;
+@end
+
 @interface GameBoardView : CCLayer {
     GameBoard *gameBoard;
 }

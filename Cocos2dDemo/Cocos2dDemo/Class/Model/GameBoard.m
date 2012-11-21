@@ -10,7 +10,7 @@
 
 @implementation GameBoard
 
-@synthesize numberOfRows,numberOfColumn;
+@synthesize numberOfRows,numberOfColumns;
 
 -(id) initWithRows:(NSInteger)aNumberOfRows columns:(NSInteger)aNumberOfColumn
 {

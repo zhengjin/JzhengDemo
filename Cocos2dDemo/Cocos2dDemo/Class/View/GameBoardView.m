@@ -32,6 +32,23 @@
 
 -(id) initWithGameBoard:(GameBoard *)aGameBoard
 {
+    if ((self = [super init])) {
+        // retain gameboard
+        self.gameBoard = aGameBoard;
+        
+        // render gameboard background
+        CCSprite *gameboardSprite = [CCSprite spriteWithFile:@"Icon-Small@2x.png"];
+        gameboardSprite.anchorPoint = CGPointMake(0, 0);
+        
+        [self addChild:gameboardSprite];
+        
+        // render spaces
+        for (int i = 0; i < gameBoard.numberOfRows; i++) {
+            for (int j = 0; j < gameBoard.numberOfColumns; j++) {
+                // position and render game board spaces
+            }
+        }
+    }
     return self;
 }
 
@@ -39,5 +56,14 @@
 {
     return self;
 }
+
+//- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    UITouch *touch = [touches anyObject];
+//    CGPoint point = [self convertTouchToNodeSpace:touch];
+//    
+//    // calculate row and column touched by the user and call a delegate method
+//    // ...
+//    [self.delegate gameBoard:self.gameBoard touchedAtRow:row column:column];
+//}
 
 @end

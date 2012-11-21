@@ -8,17 +8,24 @@
 
 #import "GameBoardController.h"
 
+#import "GameBoardView.h"
+#import "GameBoard.h"
 
 @implementation GameBoardController
 
 -(id) init
 {
-    if(self=[super init])
-    {
-        view=[GameBoardView node];
+    if ((self = [super init])) {
+        // initialize model
+        
+        GameBoard *gameBoard = [[GameBoard alloc] initWithRows:7 columns:9];
+        
+        // initialize view
+        view = [[GameBoardView alloc] initWithGameBoard:gameBoard];
         
         [self addChild:view];
     }
+    
     return  self;
 }
 

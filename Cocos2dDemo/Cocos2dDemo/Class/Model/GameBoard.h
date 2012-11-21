@@ -11,13 +11,13 @@
 @interface GameBoard : NSObject
 {
     NSInteger numberOfRows;
-    NSInteger numberOfColumn;
+    NSInteger numberOfColumns;
 }
 
 -(id)initWithRows:(NSInteger)aNumberOfRows columns:(NSInteger)aNumberOfColumn;
 
 @property (nonatomic) NSInteger numberOfRows;
-@property (nonatomic) NSInteger numberOfColumn;
+@property (nonatomic) NSInteger numberOfColumns;
 
 @end
 
