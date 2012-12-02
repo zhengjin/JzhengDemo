@@ -471,8 +471,11 @@
 		AC53FA571666442500360C51 /* GameMvcDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AC53FBDE1666442800360C51 /* AppDelegate.h */,
-				AC53FBDF1666442800360C51 /* AppDelegate.m */,
+				AC53FBF216664E1A00360C51 /* View */,
+				AC53FBF116664D5C00360C51 /* Controller */,
+				AC53FBF016664CA800360C51 /* Model */,
+				AC53FBF316664EC400360C51 /* Images */,
+				AC53FBF416664F9B00360C51 /* System */,
 				AC53FBE11666442800360C51 /* HelloWorldLayer.h */,
 				AC53FBE21666442800360C51 /* HelloWorldLayer.m */,
 				AC53FBE41666442800360C51 /* IntroLayer.h */,
@@ -855,6 +858,43 @@
 				AC53FBDC1666442800360C51 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC53FBF016664CA800360C51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AC53FBF116664D5C00360C51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AC53FBF216664E1A00360C51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AC53FBF316664EC400360C51 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		AC53FBF416664F9B00360C51 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				AC53FBDE1666442800360C51 /* AppDelegate.h */,
+				AC53FBDF1666442800360C51 /* AppDelegate.m */,
+			);
+			name = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
