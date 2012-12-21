@@ -8,6 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AbstractModel : NSObject
+@class AbstractModel;
+
+@protocol ModelDelegate <NSObject>
+
+@required
+-(void)modelDidChange:(AbstractModel *)model;
+
+@end
+
+// private methods for AbstractModel
+@protocol AbstractModel <NSObject>
+
+@required
+-(void)didChange;	// notifies delegates of change. object is responsible for calling this internally
+
+@end
+
+@interface AbstractModel : NSObject<AbstractModel>
+{
+    
+}
 
 @end

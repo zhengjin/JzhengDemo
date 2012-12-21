@@ -140,7 +140,7 @@
 		AC53FBE61666442800360C51 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE51666442800360C51 /* IntroLayer.m */; };
 		AC7E3424168496CA00407B02 /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E3423168496CA00407B02 /* AbstractModel.m */; };
 		AC7E34281684972C00407B02 /* CCNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E34271684972C00407B02 /* CCNodeController.m */; };
-		AC7E342B168497A800407B02 /* CCNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E342A168497A800407B02 /* CCNodeAdditions.m */; };
+		AC7E34371684A8CC00407B02 /* CCNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E34361684A8CC00407B02 /* CCNodeAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -420,8 +420,8 @@
 		AC7E3423168496CA00407B02 /* AbstractModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractModel.m; path = Model/AbstractModel.m; sourceTree = "<group>"; };
 		AC7E34261684972C00407B02 /* CCNodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeController.h; path = Controller/CCNodeController.h; sourceTree = "<group>"; };
 		AC7E34271684972C00407B02 /* CCNodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeController.m; path = Controller/CCNodeController.m; sourceTree = "<group>"; };
-		AC7E3429168497A800407B02 /* CCNodeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeAdditions.h; path = View/CCNodeAdditions.h; sourceTree = "<group>"; };
-		AC7E342A168497A800407B02 /* CCNodeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeAdditions.m; path = View/CCNodeAdditions.m; sourceTree = "<group>"; };
+		AC7E34351684A8CC00407B02 /* CCNodeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeAdditions.h; path = View/CCNodeAdditions.h; sourceTree = "<group>"; };
+		AC7E34361684A8CC00407B02 /* CCNodeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeAdditions.m; path = View/CCNodeAdditions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -890,8 +890,8 @@
 		AC53FBF216664E1A00360C51 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC7E3429168497A800407B02 /* CCNodeAdditions.h */,
-				AC7E342A168497A800407B02 /* CCNodeAdditions.m */,
+				AC7E34351684A8CC00407B02 /* CCNodeAdditions.h */,
+				AC7E34361684A8CC00407B02 /* CCNodeAdditions.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1097,7 +1097,7 @@
 				AC53FBE61666442800360C51 /* IntroLayer.m in Sources */,
 				AC7E3424168496CA00407B02 /* AbstractModel.m in Sources */,
 				AC7E34281684972C00407B02 /* CCNodeController.m in Sources */,
-				AC7E342B168497A800407B02 /* CCNodeAdditions.m in Sources */,
+				AC7E34371684A8CC00407B02 /* CCNodeAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
