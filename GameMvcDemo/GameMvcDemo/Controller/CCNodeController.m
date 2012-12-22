@@ -10,4 +10,6 @@
 
 @implementation CCNodeController
 
+@synthesize model, node, swallowsTouches;
+
 @end

@@ -27,7 +27,10 @@
 
 @interface AbstractModel : NSObject<AbstractModel>
 {
-    
+   NSMutableSet *delegates; 
 }
+
+-(void)addDelegate:(id<ModelDelegate>)delegate;
+-(void)removeDelegate:(id<ModelDelegate>)delegate;
 
 @end
