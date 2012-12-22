@@ -93,6 +93,8 @@ static NSUInteger globalOrderOfArrival = 1;
 
 #pragma mark CCNode - Init & cleanup
 
+@synthesize controller;	// cocosMNC addition
+
 +(id) node
 {
 	return [[[self alloc] init] autorelease];
@@ -150,6 +152,9 @@ static NSUInteger globalOrderOfArrival = 1;
 		CCDirector *director = [CCDirector sharedDirector];
 		self.actionManager = [director actionManager];
 		self.scheduler = [director scheduler];
+        
+        // cocosMNC addition
+		controller = nil;
 	}
 
 	return self;
@@ -187,6 +192,8 @@ static NSUInteger globalOrderOfArrival = 1;
 		child.parent = nil;
 
 	[children_ release];
+    
+    [controller release];	// cocosMNC addition
 
 	[super dealloc];
 }
@@ -616,6 +623,12 @@ static NSUInteger globalOrderOfArrival = 1;
 	[self resumeSchedulerAndActions];
 
 	isRunning_ = YES;
+    
+    // cocosMNC addition
+	// Notify the controller that the Node is about to be on screen so that it can register for touches.
+	if (controller) {
+		[controller onEnter];
+	}
 }
 
 -(void) onEnterTransitionDidFinish
@@ -634,6 +647,12 @@ static NSUInteger globalOrderOfArrival = 1;
 	isRunning_ = NO;
 
 	[children_ makeObjectsPerformSelector:@selector(onExit)];
+    
+    // cocosMNC addition
+	// Notify the controller that the Node is about to leave the screen so that it can unregister for touches.
+	if (controller) {
+		[controller onExit];
+	}
 }
 
 #pragma mark CCNode Actions

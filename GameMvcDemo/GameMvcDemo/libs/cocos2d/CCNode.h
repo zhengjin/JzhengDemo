@@ -44,6 +44,8 @@ enum {
 @class CCActionManager;
 @class CCAction;
 
+@class CCNodeController;	// cocosMNC addition
+
 /** CCNode is the main element. Anything thats gets drawn or contains things that get drawn is a CCNode.
  The most popular CCNodes are: CCScene, CCLayer, CCSprite, CCMenu.
 
@@ -178,6 +180,8 @@ enum {
 	BOOL ignoreAnchorPointForPosition_;
 
 	BOOL isReorderChildDirty_;	
+    
+    CCNodeController *controller;	// cocosMNC addition
 }
 
 /** The z order of the node relative to its "siblings": children of the same parent */
@@ -262,6 +266,8 @@ enum {
 @property(nonatomic,readwrite,assign) void* userData;
 /** Similar to userData, but instead of holding a void* it holds an id */
 @property(nonatomic,readwrite,retain) id userObject;
+
+@property (nonatomic, retain) CCNodeController *controller;	// cocosMNC addition
 
 /** Shader Program
  @since v2.0
