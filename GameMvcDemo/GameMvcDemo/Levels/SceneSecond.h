@@ -6,8 +6,12 @@
 //  Copyright (c) 2012年 点睛工作室. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
-@interface SceneSecond : NSObject
+@interface SceneSecond : CCLayer
+{}
+
+// returns a Scene that contains the HelloWorld as the only child
++(id) scene;
 
 @end

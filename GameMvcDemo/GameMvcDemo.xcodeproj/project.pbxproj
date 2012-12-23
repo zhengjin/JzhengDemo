@@ -139,6 +139,7 @@
 		AC53FBE31666442800360C51 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE21666442800360C51 /* HelloWorldLayer.m */; };
 		AC53FBE61666442800360C51 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE51666442800360C51 /* IntroLayer.m */; };
 		AC76EB2416872A8200606BA9 /* ViewText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76EB2316872A8200606BA9 /* ViewText.m */; };
+		AC76EB2B16873E9400606BA9 /* ControllerMoving.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76EB2A16873E9400606BA9 /* ControllerMoving.m */; };
 		AC798A3116868C8300C20600 /* SceneFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = AC798A3016868C8300C20600 /* SceneFirst.m */; };
 		AC798A3416868CA400C20600 /* SceneSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = AC798A3316868CA400C20600 /* SceneSecond.m */; };
 		AC7E3424168496CA00407B02 /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E3423168496CA00407B02 /* AbstractModel.m */; };
@@ -423,6 +424,8 @@
 		AC53FBE51666442800360C51 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		AC76EB2216872A8200606BA9 /* ViewText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewText.h; path = View/ViewText.h; sourceTree = "<group>"; };
 		AC76EB2316872A8200606BA9 /* ViewText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewText.m; path = View/ViewText.m; sourceTree = "<group>"; };
+		AC76EB2916873E9400606BA9 /* ControllerMoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllerMoving.h; path = Controller/ControllerMoving.h; sourceTree = "<group>"; };
+		AC76EB2A16873E9400606BA9 /* ControllerMoving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllerMoving.m; path = Controller/ControllerMoving.m; sourceTree = "<group>"; };
 		AC798A2F16868C8300C20600 /* SceneFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneFirst.h; path = Levels/SceneFirst.h; sourceTree = "<group>"; };
 		AC798A3016868C8300C20600 /* SceneFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SceneFirst.m; path = Levels/SceneFirst.m; sourceTree = "<group>"; };
 		AC798A3216868CA400C20600 /* SceneSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSecond.h; path = Levels/SceneSecond.h; sourceTree = "<group>"; };
@@ -903,6 +906,8 @@
 				AC7E34271684972C00407B02 /* CCNodeController.m */,
 				AC94290F1685FCAC0035E576 /* ControllerText.h */,
 				AC9429101685FCAC0035E576 /* ControllerText.m */,
+				AC76EB2916873E9400606BA9 /* ControllerMoving.h */,
+				AC76EB2A16873E9400606BA9 /* ControllerMoving.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1136,6 +1141,7 @@
 				AC798A3116868C8300C20600 /* SceneFirst.m in Sources */,
 				AC798A3416868CA400C20600 /* SceneSecond.m in Sources */,
 				AC76EB2416872A8200606BA9 /* ViewText.m in Sources */,
+				AC76EB2B16873E9400606BA9 /* ControllerMoving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
