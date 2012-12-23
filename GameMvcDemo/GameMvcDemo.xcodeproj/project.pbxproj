@@ -138,9 +138,14 @@
 		AC53FBE01666442800360C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBDF1666442800360C51 /* AppDelegate.m */; };
 		AC53FBE31666442800360C51 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE21666442800360C51 /* HelloWorldLayer.m */; };
 		AC53FBE61666442800360C51 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE51666442800360C51 /* IntroLayer.m */; };
+		AC76EB2416872A8200606BA9 /* ViewText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76EB2316872A8200606BA9 /* ViewText.m */; };
+		AC798A3116868C8300C20600 /* SceneFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = AC798A3016868C8300C20600 /* SceneFirst.m */; };
+		AC798A3416868CA400C20600 /* SceneSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = AC798A3316868CA400C20600 /* SceneSecond.m */; };
 		AC7E3424168496CA00407B02 /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E3423168496CA00407B02 /* AbstractModel.m */; };
 		AC7E34281684972C00407B02 /* CCNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E34271684972C00407B02 /* CCNodeController.m */; };
 		AC7E34371684A8CC00407B02 /* CCNodeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7E34361684A8CC00407B02 /* CCNodeAdditions.m */; };
+		AC94290E1685FBB90035E576 /* ModelText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC94290D1685FBB90035E576 /* ModelText.m */; };
+		AC9429111685FCAC0035E576 /* ControllerText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9429101685FCAC0035E576 /* ControllerText.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -416,12 +421,22 @@
 		AC53FBE21666442800360C51 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		AC53FBE41666442800360C51 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		AC53FBE51666442800360C51 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		AC76EB2216872A8200606BA9 /* ViewText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewText.h; path = View/ViewText.h; sourceTree = "<group>"; };
+		AC76EB2316872A8200606BA9 /* ViewText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewText.m; path = View/ViewText.m; sourceTree = "<group>"; };
+		AC798A2F16868C8300C20600 /* SceneFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneFirst.h; path = Levels/SceneFirst.h; sourceTree = "<group>"; };
+		AC798A3016868C8300C20600 /* SceneFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SceneFirst.m; path = Levels/SceneFirst.m; sourceTree = "<group>"; };
+		AC798A3216868CA400C20600 /* SceneSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSecond.h; path = Levels/SceneSecond.h; sourceTree = "<group>"; };
+		AC798A3316868CA400C20600 /* SceneSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SceneSecond.m; path = Levels/SceneSecond.m; sourceTree = "<group>"; };
 		AC7E3422168496CA00407B02 /* AbstractModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbstractModel.h; path = Model/AbstractModel.h; sourceTree = "<group>"; };
 		AC7E3423168496CA00407B02 /* AbstractModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbstractModel.m; path = Model/AbstractModel.m; sourceTree = "<group>"; };
 		AC7E34261684972C00407B02 /* CCNodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeController.h; path = Controller/CCNodeController.h; sourceTree = "<group>"; };
 		AC7E34271684972C00407B02 /* CCNodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeController.m; path = Controller/CCNodeController.m; sourceTree = "<group>"; };
 		AC7E34351684A8CC00407B02 /* CCNodeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCNodeAdditions.h; path = View/CCNodeAdditions.h; sourceTree = "<group>"; };
 		AC7E34361684A8CC00407B02 /* CCNodeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCNodeAdditions.m; path = View/CCNodeAdditions.m; sourceTree = "<group>"; };
+		AC94290C1685FBB80035E576 /* ModelText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelText.h; path = Model/ModelText.h; sourceTree = "<group>"; };
+		AC94290D1685FBB90035E576 /* ModelText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelText.m; path = Model/ModelText.m; sourceTree = "<group>"; };
+		AC94290F1685FCAC0035E576 /* ControllerText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllerText.h; path = Controller/ControllerText.h; sourceTree = "<group>"; };
+		AC9429101685FCAC0035E576 /* ControllerText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ControllerText.m; path = Controller/ControllerText.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +495,7 @@
 		AC53FA571666442500360C51 /* GameMvcDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AC798A251686890400C20600 /* Levels */,
 				AC53FBF016664CA800360C51 /* Model */,
 				AC53FBF216664E1A00360C51 /* View */,
 				AC53FBF116664D5C00360C51 /* Controller */,
@@ -874,6 +890,8 @@
 			children = (
 				AC7E3422168496CA00407B02 /* AbstractModel.h */,
 				AC7E3423168496CA00407B02 /* AbstractModel.m */,
+				AC94290C1685FBB80035E576 /* ModelText.h */,
+				AC94290D1685FBB90035E576 /* ModelText.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -883,6 +901,8 @@
 			children = (
 				AC7E34261684972C00407B02 /* CCNodeController.h */,
 				AC7E34271684972C00407B02 /* CCNodeController.m */,
+				AC94290F1685FCAC0035E576 /* ControllerText.h */,
+				AC9429101685FCAC0035E576 /* ControllerText.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -892,6 +912,8 @@
 			children = (
 				AC7E34351684A8CC00407B02 /* CCNodeAdditions.h */,
 				AC7E34361684A8CC00407B02 /* CCNodeAdditions.m */,
+				AC76EB2216872A8200606BA9 /* ViewText.h */,
+				AC76EB2316872A8200606BA9 /* ViewText.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -910,6 +932,17 @@
 				AC53FBDF1666442800360C51 /* AppDelegate.m */,
 			);
 			name = System;
+			sourceTree = "<group>";
+		};
+		AC798A251686890400C20600 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				AC798A2F16868C8300C20600 /* SceneFirst.h */,
+				AC798A3016868C8300C20600 /* SceneFirst.m */,
+				AC798A3216868CA400C20600 /* SceneSecond.h */,
+				AC798A3316868CA400C20600 /* SceneSecond.m */,
+			);
+			name = Levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1098,6 +1131,11 @@
 				AC7E3424168496CA00407B02 /* AbstractModel.m in Sources */,
 				AC7E34281684972C00407B02 /* CCNodeController.m in Sources */,
 				AC7E34371684A8CC00407B02 /* CCNodeAdditions.m in Sources */,
+				AC94290E1685FBB90035E576 /* ModelText.m in Sources */,
+				AC9429111685FCAC0035E576 /* ControllerText.m in Sources */,
+				AC798A3116868C8300C20600 /* SceneFirst.m in Sources */,
+				AC798A3416868CA400C20600 /* SceneSecond.m in Sources */,
+				AC76EB2416872A8200606BA9 /* ViewText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
