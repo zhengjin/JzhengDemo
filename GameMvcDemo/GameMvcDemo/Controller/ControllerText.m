@@ -30,9 +30,9 @@
 	static int x = 1;
 	static BOOL isFirstSceneRunning = YES;
     
-	// only do anything if the touch is in the node's rectangle
+	// 出发点击
 	if ([self.node isTouchInRect:touch]) {
-		// every 10 touches, alternate Scenes to demonstrate auto-registering/unregistering of touch events.
+		// 每十次触发另一个场景.
 		if (x%10 == 0) {
 			if (isFirstSceneRunning) {
 				[[CCDirector sharedDirector] replaceScene:[SceneSecond scene]];
@@ -43,7 +43,7 @@
 			isFirstSceneRunning = !isFirstSceneRunning;
 		}
         
-		// every 4 touches, alternate between a moving view and a non-moving view
+		// 每四次触发运动
 		if (x%4 == 0) {
 			ViewText *newNode;
 			
@@ -57,7 +57,7 @@
 			self.node = newNode;
 		}
 		
-		// every 3 touches, alternate between a green model or a red model with a different default string
+		// 每三次触发不同颜色模式
 		if (x%3 == 0) {
 			ModelText *newModel = [[ModelText new] autorelease];
 			if (x%6 == 0) {

@@ -13,8 +13,9 @@
 
 -(void)modelDidChange:(ModelText *)model {
 	[super modelDidChange:model];
-	[self runAction:[CCEaseExponentialOut actionWithAction:[CCMoveBy actionWithDuration: 1.0
-                                                                               position: ccp(CCRANDOM_MINUS1_1()*20, CCRANDOM_MINUS1_1()*20)]]];
+	[self runAction:[CCEaseExponentialOut actionWithAction:
+                     [CCMoveBy actionWithDuration: 1.0 position: 
+                      ccp(CCRANDOM_MINUS1_1()*20, CCRANDOM_MINUS1_1()*20)]]];
 }
 
 @end
