@@ -8,7 +8,6 @@
 
 #import "AbstractModel.h"
 #import "cocos2d.h"
-#import <Foundation/Foundation.h>
 
 @interface ModelText : AbstractModel
 {

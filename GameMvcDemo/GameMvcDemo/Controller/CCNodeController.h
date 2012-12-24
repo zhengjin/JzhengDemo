@@ -6,8 +6,6 @@
 //  Copyright (c) 2012年 点睛工作室. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #import "cocos2d.h"
 
 #import "CCNodeAdditions.h"

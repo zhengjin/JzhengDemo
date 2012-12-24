@@ -136,8 +136,6 @@
 		AC53FBD81666442800360C51 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBD71666442800360C51 /* vec4.c */; };
 		AC53FBDD1666442800360C51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBDC1666442800360C51 /* main.m */; };
 		AC53FBE01666442800360C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBDF1666442800360C51 /* AppDelegate.m */; };
-		AC53FBE31666442800360C51 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE21666442800360C51 /* HelloWorldLayer.m */; };
-		AC53FBE61666442800360C51 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC53FBE51666442800360C51 /* IntroLayer.m */; };
 		AC76EB2416872A8200606BA9 /* ViewText.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76EB2316872A8200606BA9 /* ViewText.m */; };
 		AC76EB2B16873E9400606BA9 /* ControllerMoving.m in Sources */ = {isa = PBXBuildFile; fileRef = AC76EB2A16873E9400606BA9 /* ControllerMoving.m */; };
 		AC798A3116868C8300C20600 /* SceneFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = AC798A3016868C8300C20600 /* SceneFirst.m */; };
@@ -418,10 +416,6 @@
 		AC53FBDC1666442800360C51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC53FBDE1666442800360C51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC53FBDF1666442800360C51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AC53FBE11666442800360C51 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		AC53FBE21666442800360C51 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		AC53FBE41666442800360C51 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		AC53FBE51666442800360C51 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 		AC76EB2216872A8200606BA9 /* ViewText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewText.h; path = View/ViewText.h; sourceTree = "<group>"; };
 		AC76EB2316872A8200606BA9 /* ViewText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewText.m; path = View/ViewText.m; sourceTree = "<group>"; };
 		AC76EB2916873E9400606BA9 /* ControllerMoving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControllerMoving.h; path = Controller/ControllerMoving.h; sourceTree = "<group>"; };
@@ -504,10 +498,6 @@
 				AC53FBF116664D5C00360C51 /* Controller */,
 				AC53FBF316664EC400360C51 /* Images */,
 				AC53FBF416664F9B00360C51 /* System */,
-				AC53FBE11666442800360C51 /* HelloWorldLayer.h */,
-				AC53FBE21666442800360C51 /* HelloWorldLayer.m */,
-				AC53FBE41666442800360C51 /* IntroLayer.h */,
-				AC53FBE51666442800360C51 /* IntroLayer.m */,
 				AC53FA581666442500360C51 /* Resources */,
 				AC53FA761666442500360C51 /* libs */,
 				AC53FBDA1666442800360C51 /* Supporting Files */,
@@ -1131,8 +1121,6 @@
 				AC53FBD81666442800360C51 /* vec4.c in Sources */,
 				AC53FBDD1666442800360C51 /* main.m in Sources */,
 				AC53FBE01666442800360C51 /* AppDelegate.m in Sources */,
-				AC53FBE31666442800360C51 /* HelloWorldLayer.m in Sources */,
-				AC53FBE61666442800360C51 /* IntroLayer.m in Sources */,
 				AC7E3424168496CA00407B02 /* AbstractModel.m in Sources */,
 				AC7E34281684972C00407B02 /* CCNodeController.m in Sources */,
 				AC7E34371684A8CC00407B02 /* CCNodeAdditions.m in Sources */,

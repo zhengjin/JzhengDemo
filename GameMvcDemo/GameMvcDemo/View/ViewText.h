@@ -9,9 +9,6 @@
 #import "cocos2d.h"
 #import "AbstractModel.h"
 
-@interface ViewText : CCLayer<ModelDelegate>
-{
-    
-}
+@interface ViewText : CCLabelTTF<ModelDelegate>
 
 @end
