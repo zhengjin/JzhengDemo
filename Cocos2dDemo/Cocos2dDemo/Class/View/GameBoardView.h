@@ -6,14 +6,17 @@
 //  Copyright 2012年 点睛工作室. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
 #import "GameBoard.h"
 
 @protocol GameBoardViewDelegate
+
 - (void)gameBoard:(GameBoard *)gameBoard touchedAtRow:(int)row column:(int)column;
+- (void)gameBoard:(GameBoard *)gameBoard toolboxItemTouchedAtIndex:(int)index;
+
 @end
+
 
 @interface GameBoardView : CCLayer {
     GameBoard *gameBoard;

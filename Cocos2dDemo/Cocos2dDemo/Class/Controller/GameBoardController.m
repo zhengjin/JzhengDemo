@@ -29,4 +29,14 @@
     return  self;
 }
 
+- (void)gameBoard:(GameBoard *)gameBoard touchedAtRow:(int)row column:(int)column
+{
+    
+}
+
+- (void)gameBoard:(GameBoard *)gameBoard toolboxItemTouchedAtIndex:(int)index
+{
+
+}
+
 @end

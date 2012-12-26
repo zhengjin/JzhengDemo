@@ -57,13 +57,4 @@
     return self;
 }
 
-//- (void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-//    UITouch *touch = [touches anyObject];
-//    CGPoint point = [self convertTouchToNodeSpace:touch];
-//    
-//    // calculate row and column touched by the user and call a delegate method
-//    // ...
-//    [self.delegate gameBoard:self.gameBoard touchedAtRow:row column:column];
-//}
-
 @end

@@ -14,15 +14,10 @@
     NSInteger numberOfColumns;
 }
 
--(id)initWithRows:(NSInteger)aNumberOfRows columns:(NSInteger)aNumberOfColumn;
-
 @property (nonatomic) NSInteger numberOfRows;
 @property (nonatomic) NSInteger numberOfColumns;
 
-@end
-
-@protocol GameBoardViewDelegate
-
--(void)gameBoard:(GameBoard *)gameBoard touchedAtRow:(int)row column:(int)column;
+-(id)initWithRows:(NSInteger)aNumberOfRows columns:(NSInteger)aNumberOfColumn;
 
 @end
+

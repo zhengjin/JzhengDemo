@@ -140,8 +140,6 @@
 		ACDC577D16245FFE004B8EB8 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = ACDC577C16245FFE004B8EB8 /* vec4.c */; };
 		ACDC578216245FFE004B8EB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC578116245FFE004B8EB8 /* main.m */; };
 		ACDC578516245FFE004B8EB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC578416245FFE004B8EB8 /* AppDelegate.m */; };
-		ACDC578816245FFE004B8EB8 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC578716245FFE004B8EB8 /* HelloWorldLayer.m */; };
-		ACDC578B16245FFE004B8EB8 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC578A16245FFE004B8EB8 /* IntroLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -420,10 +418,6 @@
 		ACDC578116245FFE004B8EB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ACDC578316245FFE004B8EB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACDC578416245FFE004B8EB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ACDC578616245FFE004B8EB8 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		ACDC578716245FFE004B8EB8 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		ACDC578916245FFE004B8EB8 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		ACDC578A16245FFE004B8EB8 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -512,10 +506,6 @@
 				AC617013162ACB6200AF6AD3 /* Model */,
 				AC617012162ACADF00AF6AD3 /* Controller */,
 				AC617010162ACAC600AF6AD3 /* View */,
-				ACDC578616245FFE004B8EB8 /* HelloWorldLayer.h */,
-				ACDC578716245FFE004B8EB8 /* HelloWorldLayer.m */,
-				ACDC578916245FFE004B8EB8 /* IntroLayer.h */,
-				ACDC578A16245FFE004B8EB8 /* IntroLayer.m */,
 				ACDC5796162464BB004B8EB8 /* VerletRope */,
 				ACDC5797162468C6004B8EB8 /* Graphics */,
 				ACDC57951624635F004B8EB8 /* System */,
@@ -1105,8 +1095,6 @@
 				ACDC577D16245FFE004B8EB8 /* vec4.c in Sources */,
 				ACDC578216245FFE004B8EB8 /* main.m in Sources */,
 				ACDC578516245FFE004B8EB8 /* AppDelegate.m in Sources */,
-				ACDC578816245FFE004B8EB8 /* HelloWorldLayer.m in Sources */,
-				ACDC578B16245FFE004B8EB8 /* IntroLayer.m in Sources */,
 				AC97D0D1162D9E91005BC419 /* GameBoardView.m in Sources */,
 				AC6F2072162EDD2600973B7E /* GameBoardController.m in Sources */,
 				AC6F2079162EE93F00973B7E /* GameBoard.m in Sources */,
