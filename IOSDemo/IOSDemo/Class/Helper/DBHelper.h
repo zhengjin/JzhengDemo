@@ -1,0 +1,32 @@
+//
+//  DBHelper.h
+//  IOSDemo
+//
+//  Created by 郑 晋 on 13-1-3.
+//  Copyright (c) 2013年 点睛工作室. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "sqlite3.h"
+
+@interface DBHelper : NSObject
+{
+    sqlite3 *database;
+}
+
+@property(readonly,nonatomic)sqlite3 *database;
+
++ (DBHelper *) newInstance;
+
+- (void) openDatabase;
+- (void) closeDatabase;
+- (NSString *) getDatabaseFullPath;
+- (void) createDatabaseIfNeeded;
+
+- (void)createtable;
+- (void)createTable:(NSString*)name WithFields:(NSArray*)fields;
+- (void)insertInto:(NSString*)tableName Fields:(NSArray*)fields Values:(NSArray*)values;
+- (NSArray *)selectFrom:(NSString*)table;
+- (NSInteger)getLastIdFromTable:(NSString*)table;
+
+@end

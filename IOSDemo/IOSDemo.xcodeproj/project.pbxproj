@@ -16,6 +16,8 @@
 		320CC833B8AF0ACFD35E6225 /* libThree20Style.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320CC833B8AF0ACFD35E6224 /* libThree20Style.a */; };
 		320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320D7DCCE32703ACAB9A45E4 /* libThree20.a */; };
 		320F2C48872C2E2C4DF86205 /* libThree20UI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320F2C48872C2E2C4DF86204 /* libThree20UI.a */; };
+		AC0382A9168F1A830042BE0C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0382A8168F1A830042BE0C /* MasterViewController.m */; };
+		AC0382AC168F1ABB0042BE0C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0382AB168F1ABB0042BE0C /* DetailViewController.m */; };
 		AC5B9AB1168C7C670021CD33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B9AB0168C7C670021CD33 /* UIKit.framework */; };
 		AC5B9AB3168C7C670021CD33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B9AB2168C7C670021CD33 /* Foundation.framework */; };
 		AC5B9AB5168C7C670021CD33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5B9AB4168C7C670021CD33 /* CoreGraphics.framework */; };
@@ -25,8 +27,8 @@
 		AC5B9AC3168C7C680021CD33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B9AC2168C7C680021CD33 /* AppDelegate.m */; };
 		AC5B9AC6168C7C680021CD33 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5B9AC4168C7C680021CD33 /* MainStoryboard.storyboard */; };
 		AC5B9AC9168C7C680021CD33 /* IOSDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5B9AC7168C7C680021CD33 /* IOSDemo.xcdatamodeld */; };
-		AC5B9ACC168C7C680021CD33 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B9ACB168C7C680021CD33 /* MasterViewController.m */; };
-		AC5B9ACF168C7C680021CD33 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B9ACE168C7C680021CD33 /* DetailViewController.m */; };
+		ACA3EC921695BC8100147C0E /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA3EC911695BC8100147C0E /* DBHelper.m */; };
+		ACA3EC941695BD0B00147C0E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA3EC931695BD0B00147C0E /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,10 @@
 		320CC833B8AF0ACFD35E6220 /* Three20Style.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20Style.xcodeproj; path = Three20/src/Three20Style/Three20Style.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320D7DCCE32703ACAB9A45E0 /* Three20.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20.xcodeproj; path = Three20/src/Three20/Three20.xcodeproj; sourceTree = SOURCE_ROOT; };
 		320F2C48872C2E2C4DF86200 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = Three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AC0382A7168F1A830042BE0C /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = TableController/MasterViewController.h; sourceTree = "<group>"; };
+		AC0382A8168F1A830042BE0C /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = TableController/MasterViewController.m; sourceTree = "<group>"; };
+		AC0382AA168F1ABB0042BE0C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = TableController/DetailViewController.h; sourceTree = "<group>"; };
+		AC0382AB168F1ABB0042BE0C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = TableController/DetailViewController.m; sourceTree = "<group>"; };
 		AC5B9AAC168C7C670021CD33 /* IOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5B9AB0168C7C670021CD33 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC5B9AB2168C7C670021CD33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -202,10 +208,9 @@
 		AC5B9AC2168C7C680021CD33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC5B9AC5168C7C680021CD33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AC5B9AC8168C7C680021CD33 /* IOSDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOSDemo.xcdatamodel; sourceTree = "<group>"; };
-		AC5B9ACA168C7C680021CD33 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		AC5B9ACB168C7C680021CD33 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		AC5B9ACD168C7C680021CD33 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		AC5B9ACE168C7C680021CD33 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ACA3EC901695BC8100147C0E /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBHelper.h; path = Class/Helper/DBHelper.h; sourceTree = "<group>"; };
+		ACA3EC911695BC8100147C0E /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBHelper.m; path = Class/Helper/DBHelper.m; sourceTree = "<group>"; };
+		ACA3EC931695BD0B00147C0E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA3EC941695BD0B00147C0E /* libsqlite3.dylib in Frameworks */,
 				3201088596B4756681693705 /* libThree20UICommon.a in Frameworks */,
 				320D7DCCE32703ACAB9A45E5 /* libThree20.a in Frameworks */,
 				320A737074758E53BA54BE95 /* libThree20UINavigator.a in Frameworks */,
@@ -294,6 +300,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AC39CFF7168C977D00DFC0A2 /* Table Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC0382A7168F1A830042BE0C /* MasterViewController.h */,
+				AC0382A8168F1A830042BE0C /* MasterViewController.m */,
+				AC0382AA168F1ABB0042BE0C /* DetailViewController.h */,
+				AC0382AB168F1ABB0042BE0C /* DetailViewController.m */,
+			);
+			name = "Table Controller";
+			sourceTree = "<group>";
+		};
 		AC5B9AA1168C7C670021CD33 = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +362,7 @@
 		AC5B9AB9168C7C670021CD33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACA3EC931695BD0B00147C0E /* libsqlite3.dylib */,
 				320B6C86F11D9990244A9730 /* Three20.bundle */,
 				AC5B9ABA168C7C670021CD33 /* IOSDemo-Info.plist */,
 				AC5B9ABB168C7C670021CD33 /* InfoPlist.strings */,
@@ -366,12 +384,19 @@
 		AC5B9ADB168C81FE0021CD33 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AC5B9ACA168C7C680021CD33 /* MasterViewController.h */,
-				AC5B9ACB168C7C680021CD33 /* MasterViewController.m */,
-				AC5B9ACD168C7C680021CD33 /* DetailViewController.h */,
-				AC5B9ACE168C7C680021CD33 /* DetailViewController.m */,
+				ACA3EC8F1695BAA500147C0E /* DbHelper */,
+				AC39CFF7168C977D00DFC0A2 /* Table Controller */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		ACA3EC8F1695BAA500147C0E /* DbHelper */ = {
+			isa = PBXGroup;
+			children = (
+				ACA3EC901695BC8100147C0E /* DBHelper.h */,
+				ACA3EC911695BC8100147C0E /* DBHelper.m */,
+			);
+			name = DbHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,8 +604,9 @@
 				AC5B9ABF168C7C670021CD33 /* main.m in Sources */,
 				AC5B9AC3168C7C680021CD33 /* AppDelegate.m in Sources */,
 				AC5B9AC9168C7C680021CD33 /* IOSDemo.xcdatamodeld in Sources */,
-				AC5B9ACC168C7C680021CD33 /* MasterViewController.m in Sources */,
-				AC5B9ACF168C7C680021CD33 /* DetailViewController.m in Sources */,
+				AC0382A9168F1A830042BE0C /* MasterViewController.m in Sources */,
+				AC0382AC168F1ABB0042BE0C /* DetailViewController.m in Sources */,
+				ACA3EC921695BC8100147C0E /* DBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
