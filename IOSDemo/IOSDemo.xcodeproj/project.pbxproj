@@ -27,6 +27,7 @@
 		AC5B9AC3168C7C680021CD33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5B9AC2168C7C680021CD33 /* AppDelegate.m */; };
 		AC5B9AC6168C7C680021CD33 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5B9AC4168C7C680021CD33 /* MainStoryboard.storyboard */; };
 		AC5B9AC9168C7C680021CD33 /* IOSDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC5B9AC7168C7C680021CD33 /* IOSDemo.xcdatamodeld */; };
+		AC9153C716B6BD780043B709 /* sortednames.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC9153C616B6BD780043B709 /* sortednames.plist */; };
 		ACA3EC921695BC8100147C0E /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA3EC911695BC8100147C0E /* DBHelper.m */; };
 		ACA3EC941695BD0B00147C0E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA3EC931695BD0B00147C0E /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
@@ -208,6 +209,7 @@
 		AC5B9AC2168C7C680021CD33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AC5B9AC5168C7C680021CD33 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		AC5B9AC8168C7C680021CD33 /* IOSDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IOSDemo.xcdatamodel; sourceTree = "<group>"; };
+		AC9153C616B6BD780043B709 /* sortednames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = sortednames.plist; path = SupportingFiles/sortednames.plist; sourceTree = "<group>"; };
 		ACA3EC901695BC8100147C0E /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBHelper.h; path = Class/Helper/DBHelper.h; sourceTree = "<group>"; };
 		ACA3EC911695BC8100147C0E /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBHelper.m; path = Class/Helper/DBHelper.m; sourceTree = "<group>"; };
 		ACA3EC931695BD0B00147C0E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -362,6 +364,7 @@
 		AC5B9AB9168C7C670021CD33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AC9153C616B6BD780043B709 /* sortednames.plist */,
 				ACA3EC931695BD0B00147C0E /* libsqlite3.dylib */,
 				320B6C86F11D9990244A9730 /* Three20.bundle */,
 				AC5B9ABA168C7C670021CD33 /* IOSDemo-Info.plist */,
@@ -591,6 +594,7 @@
 				320B6C86F11D9990244A9731 /* Three20.bundle in Resources */,
 				AC5B9ABD168C7C670021CD33 /* InfoPlist.strings in Resources */,
 				AC5B9AC6168C7C680021CD33 /* MainStoryboard.storyboard in Resources */,
+				AC9153C716B6BD780043B709 /* sortednames.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

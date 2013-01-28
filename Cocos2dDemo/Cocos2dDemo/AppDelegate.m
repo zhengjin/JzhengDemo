@@ -7,9 +7,7 @@
 //
 
 #import "cocos2d.h"
-
 #import "AppDelegate.h"
-
 #import "GameBoardController.h"
 
 @implementation AppController
