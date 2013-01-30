@@ -51,6 +51,10 @@
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WdR-gS-1qr" id="AYE-FY-KyV"/>
+                                    <outlet property="delegate" destination="WdR-gS-1qr" id="Rg5-f0-QKV"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" id="qQu-nm-dFY">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -73,7 +77,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tec-GG-sJt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController definesPresentationContext="YES" id="5l7-qg-Xdm" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rdM-7X-V7x">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
