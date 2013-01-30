@@ -103,4 +103,8 @@
     return key;
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return keys;
+}
+
 @end
