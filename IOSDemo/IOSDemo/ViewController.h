@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSDictionary *names;
 @property (strong, nonatomic) NSArray *keys;
 
+@property (strong, nonatomic) IBOutlet UISearchBar *search;
+@property (strong, nonatomic) IBOutlet UITableView *table;
 @end

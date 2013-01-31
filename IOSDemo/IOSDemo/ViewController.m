@@ -9,6 +9,8 @@
 #import "ViewController.h"
 
 @implementation ViewController
+@synthesize search;
+@synthesize table;
 
 @synthesize names,keys;
 
@@ -34,6 +36,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTable:nil];
+    [self setSearch:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
