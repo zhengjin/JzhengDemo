@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "NSDictionary+mutableDeepCopy.h"
 
 @implementation ViewController
 @synthesize search;
 @synthesize table;
 
-@synthesize names,keys;
+@synthesize names,keys,allNames;
 
 - (void)didReceiveMemoryWarning
 {
@@ -28,10 +29,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
     NSString *path = [[NSBundle mainBundle] pathForResource:@"sortednames" ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    self.names = dict;
+    self.allNames = dict;
     
-    NSArray *array = [[names allKeys] sortedArrayUsingSelector:@selector(compare:)];
-    self.keys = array;
+    [self resetSearch];
+    [table reloadData];
+    [table setContentOffset:CGPointMake(0.0, 44.0) animated:NO];
 }
 
 - (void)viewDidUnload
@@ -43,6 +45,7 @@
     // e.g. self.myOutlet = nil;
     self.names = nil;
     self.keys = nil;
+    self.allNames = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -71,13 +74,15 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-#pragma mark -
 #pragma mark Table View Data Source Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [self.keys count];
+    return ([keys count] > 0) ? [keys count] : 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if([keys count] == 0)
+        return 0;
+    
     NSString *key = [keys objectAtIndex:section];
     NSArray *nameSection = [names objectForKey:key];
     return [nameSection count];
@@ -103,12 +108,52 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if([keys count] == 0)
+        return nil;
+    
     NSString *key = [keys objectAtIndex:section];
     return key;
 }
 
+//添加字母索引
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     return keys;
+}
+
+#pragma mark Custom Methods
+- (void)resetSearch {
+    self.names = [self.allNames mutableDeepCopy];
+    NSMutableArray *keyArray = [[NSMutableArray alloc] init];
+    [keyArray addObjectsFromArray:[[self.allNames allKeys] sortedArrayUsingSelector:@selector(compare:)]];
+    self.keys = keyArray;
+}
+
+- (void)handleSearchForTeam:(NSString *)searchTerm {
+    
+    NSMutableArray *sectionsToRemove = [[NSMutableArray alloc] init];
+    [self resetSearch];
+    
+    for (NSString *key in self.keys) {
+        NSMutableArray *array = [names valueForKey:key];
+        NSMutableArray *toRemove = [[NSMutableArray alloc] init];
+        for (NSString *name in array) {
+            if ([name rangeOfString:searchTerm options:NSCaseInsensitiveSearch].location == NSNotFound) {
+                [toRemove addObject:name];
+            }
+        }
+        if ([array count] == [toRemove count]) {
+            [sectionsToRemove addObject:key];
+        }
+        
+        [array removeObjectsInArray:toRemove];
+    }
+    [self.keys removeObjectsInArray:sectionsToRemove];
+    [table reloadData];
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [search resignFirstResponder];//隐藏键盘
+    return indexPath;
 }
 
 @end

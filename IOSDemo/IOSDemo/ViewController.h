@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
-@property (strong, nonatomic) NSDictionary *names;
-@property (strong, nonatomic) NSArray *keys;
+@property (strong, nonatomic) NSMutableDictionary *names;
+@property (strong, nonatomic) NSMutableArray *keys;
+@property (strong, nonatomic) NSDictionary *allNames;
 
 @property (strong, nonatomic) IBOutlet UISearchBar *search;
 @property (strong, nonatomic) IBOutlet UITableView *table;
+
+- (void)resetSearch;
+- (void)handleSearchForTeam:(NSString *)searchTerm;
+
 @end
