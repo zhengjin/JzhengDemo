@@ -82,9 +82,9 @@
 		AC6157E916B9527F0058D5B4 /* IOSDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AC61584316B95AA10058D5B4 /* System */,
 				AC61580516B9579C0058D5B4 /* ViewControllers */,
 				AC61580416B957830058D5B4 /* Resources */,
+				AC61584316B95AA10058D5B4 /* System */,
 				AC6157EA16B9527F0058D5B4 /* Supporting Files */,
 			);
 			path = IOSDemo;
@@ -325,6 +325,7 @@
 				AC6157FF16B9527F0058D5B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

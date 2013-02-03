@@ -13,7 +13,7 @@
 @synthesize search;
 @synthesize table;
 
-@synthesize names,keys,allNames;
+@synthesize names,keys,allNames,isSearching;
 
 - (void)didReceiveMemoryWarning
 {
@@ -112,11 +112,16 @@
         return nil;
     
     NSString *key = [keys objectAtIndex:section];
+    if (key == UITableViewIndexSearch) {
+        return nil;
+    }
     return key;
 }
 
 //添加字母索引
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    if(isSearching)
+        return nil;
     return keys;
 }
 
@@ -124,6 +129,7 @@
 - (void)resetSearch {
     self.names = [self.allNames mutableDeepCopy];
     NSMutableArray *keyArray = [[NSMutableArray alloc] init];
+    [keyArray addObject:UITableViewIndexSearch];
     [keyArray addObjectsFromArray:[[self.allNames allKeys] sortedArrayUsingSelector:@selector(compare:)]];
     self.keys = keyArray;
 }
@@ -151,9 +157,50 @@
     [table reloadData];
 }
 
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     [search resignFirstResponder];//隐藏键盘
+    isSearching = NO;
+    search.text = @"";
+    [table reloadData];
     return indexPath;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSString *searchTeam = [searchBar text];
+    [self handleSearchForTeam:searchTeam];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchTerm {
+    if ([searchTerm length] == 0) {
+        [self resetSearch];
+        [table reloadData];
+        return;
+    }
+    [self handleSearchForTeam:searchTerm];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    isSearching = NO;
+    search.text = @"";
+    [self resetSearch];
+    [table reloadData];
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    isSearching = YES;
+    [table reloadData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    NSString *key = [keys objectAtIndex:index];
+    if(key == UITableViewIndexSearch) {
+        [tableView setContentOffset:CGPointZero animated:NO];
+        return NSNotFound;
+    }
+    else
+        return index;
 }
 
 @end

@@ -64,6 +64,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WdR-gS-1qr" id="4pY-of-YOd"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -72,8 +75,8 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="search" destination="sig-jx-dWx" id="aIa-X7-Maj"/>
-                        <outlet property="table" destination="zPk-Pp-uX4" id="kDx-1S-UEB"/>
+                        <outlet property="search" destination="sig-jx-dWx" id="mPS-U8-hqt"/>
+                        <outlet property="table" destination="zPk-Pp-uX4" id="csC-F1-Qyn"/>
                     </connections>
                 </viewController>
             </objects>
