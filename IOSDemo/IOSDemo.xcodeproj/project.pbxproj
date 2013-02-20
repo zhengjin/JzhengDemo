@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC04190C16D515E800690BAE /* IPCityLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC04190B16D515E800690BAE /* IPCityLocation.m */; };
 		AC6157E416B9527F0058D5B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6157E316B9527F0058D5B4 /* UIKit.framework */; };
 		AC6157E616B9527F0058D5B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6157E516B9527F0058D5B4 /* Foundation.framework */; };
 		AC6157E816B9527F0058D5B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6157E716B9527F0058D5B4 /* CoreGraphics.framework */; };
@@ -70,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC04190A16D515E800690BAE /* IPCityLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPCityLocation.h; path = Entity/IPCityLocation.h; sourceTree = "<group>"; };
+		AC04190B16D515E800690BAE /* IPCityLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IPCityLocation.m; path = Entity/IPCityLocation.m; sourceTree = "<group>"; };
 		AC6157DF16B9527F0058D5B4 /* IOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6157E316B9527F0058D5B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC6157E516B9527F0058D5B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +187,7 @@
 		AC6157E916B9527F0058D5B4 /* IOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AC61584716B9677D0058D5B4 /* Category */,
 				AC6C83BD16D3BCA6009DE9B3 /* Entity */,
 				AC61580516B9579C0058D5B4 /* ViewControllers */,
 				AC61580416B957830058D5B4 /* Resources */,
@@ -218,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				AC7DC7B516BDFA9E00F4C8FD /* Json */,
-				AC61584716B9677D0058D5B4 /* Category */,
 				AC61584416B95AB50058D5B4 /* Table */,
 			);
 			name = ViewControllers;
@@ -256,6 +259,8 @@
 			children = (
 				AC6C83BE16D3BD13009DE9B3 /* DayWeather.h */,
 				AC6C83BF16D3BD13009DE9B3 /* DayWeather.m */,
+				AC04190A16D515E800690BAE /* IPCityLocation.h */,
+				AC04190B16D515E800690BAE /* IPCityLocation.m */,
 			);
 			name = Entity;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				AC61584A16B967D50058D5B4 /* NSDictionary+mutableDeepCopy.m in Sources */,
 				ACB7DAA216C3B5130009720D /* WeatherController.m in Sources */,
 				AC6C83C016D3BD13009DE9B3 /* DayWeather.m in Sources */,
+				AC04190C16D515E800690BAE /* IPCityLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
