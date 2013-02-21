@@ -19,6 +19,7 @@
 		AC61584616B9608C0058D5B4 /* sortednames.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC61584516B9608C0058D5B4 /* sortednames.plist */; };
 		AC61584A16B967D50058D5B4 /* NSDictionary+mutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC61584916B967D50058D5B4 /* NSDictionary+mutableDeepCopy.m */; };
 		AC6C83C016D3BD13009DE9B3 /* DayWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6C83BF16D3BD13009DE9B3 /* DayWeather.m */; };
+		AC6E2ECA16D6622500B01F9E /* ModelWeatherParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6E2EC916D6622500B01F9E /* ModelWeatherParser.m */; };
 		AC967F8E16C294A100CCC3EB /* BG_TIME.png in Resources */ = {isa = PBXBuildFile; fileRef = AC967F5A16C294A100CCC3EB /* BG_TIME.png */; };
 		AC967F8F16C294A100CCC3EB /* BG_WEATHER_DOWN.png in Resources */ = {isa = PBXBuildFile; fileRef = AC967F5B16C294A100CCC3EB /* BG_WEATHER_DOWN.png */; };
 		AC967F9016C294A100CCC3EB /* BG_WEATHER_UP.png in Resources */ = {isa = PBXBuildFile; fileRef = AC967F5C16C294A100CCC3EB /* BG_WEATHER_UP.png */; };
@@ -91,6 +92,8 @@
 		AC61584916B967D50058D5B4 /* NSDictionary+mutableDeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+mutableDeepCopy.m"; path = "Category/NSDictionary+mutableDeepCopy.m"; sourceTree = "<group>"; };
 		AC6C83BE16D3BD13009DE9B3 /* DayWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayWeather.h; path = Entity/DayWeather.h; sourceTree = "<group>"; };
 		AC6C83BF16D3BD13009DE9B3 /* DayWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayWeather.m; path = Entity/DayWeather.m; sourceTree = "<group>"; };
+		AC6E2EC816D6622500B01F9E /* ModelWeatherParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModelWeatherParser.h; path = Model/ModelWeatherParser.h; sourceTree = "<group>"; };
+		AC6E2EC916D6622500B01F9E /* ModelWeatherParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModelWeatherParser.m; path = Model/ModelWeatherParser.m; sourceTree = "<group>"; };
 		AC967F5A16C294A100CCC3EB /* BG_TIME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG_TIME.png; sourceTree = "<group>"; };
 		AC967F5B16C294A100CCC3EB /* BG_WEATHER_DOWN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG_WEATHER_DOWN.png; sourceTree = "<group>"; };
 		AC967F5C16C294A100CCC3EB /* BG_WEATHER_UP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG_WEATHER_UP.png; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 		AC6157E916B9527F0058D5B4 /* IOSDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AC6E2EC616D661D200B01F9E /* Model */,
 				AC61584716B9677D0058D5B4 /* Category */,
 				AC6C83BD16D3BCA6009DE9B3 /* Entity */,
 				AC61580516B9579C0058D5B4 /* ViewControllers */,
@@ -263,6 +267,15 @@
 				AC04190B16D515E800690BAE /* IPCityLocation.m */,
 			);
 			name = Entity;
+			sourceTree = "<group>";
+		};
+		AC6E2EC616D661D200B01F9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC6E2EC816D6622500B01F9E /* ModelWeatherParser.h */,
+				AC6E2EC916D6622500B01F9E /* ModelWeatherParser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		AC7DC7B516BDFA9E00F4C8FD /* Json */ = {
@@ -464,6 +477,7 @@
 				ACB7DAA216C3B5130009720D /* WeatherController.m in Sources */,
 				AC6C83C016D3BD13009DE9B3 /* DayWeather.m in Sources */,
 				AC04190C16D515E800690BAE /* IPCityLocation.m in Sources */,
+				AC6E2ECA16D6622500B01F9E /* ModelWeatherParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
