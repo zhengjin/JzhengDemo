@@ -22,7 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    ModelWeatherParser *weatherModer=[[ModelWeatherParser alloc] init];
+    [weatherModer startParse];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

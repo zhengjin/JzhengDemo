@@ -19,8 +19,27 @@
 
 -(void)startParse{
     NSError *error;
+    
+    NSStringEncoding chineseEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+	NSString *ipAddressInfo = 
+        [NSString stringWithContentsOfURL:[NSURL URLWithString:ipWebServiceURLStr] encoding:chineseEncoding error:&error];
+	NSLog(@"location info: %@", ipAddressInfo);
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"您的IP地址是：+:[^\\s]*" options:0 error:&error];
+    if (regex != nil) {
+        NSTextCheckingResult *firstMatch = 
+            [regex firstMatchInString:ipAddressInfo options:0 range:NSMakeRange(0, [ipAddressInfo length])];
+        
+        if (firstMatch) {
+            NSRange resultRange = [firstMatch rangeAtIndex:0];
+            //从urlString中截取数据
+            NSString *result = [ipAddressInfo substringWithRange:resultRange];
+            NSLog(@"expression result: %@",result);
+        }
+    }
+
     //加载一个NSURL对象
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:ipWebServiceURLStr]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:weatherServiceURLStr]];
     //将请求的url数据放到NSData对象中
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     //IOS5自带解析类NSJSONSerialization从response中解析出数据放到字典中

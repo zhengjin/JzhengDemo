@@ -18,6 +18,7 @@
 @synthesize cityFullName;
 @synthesize citySimpleName;
 @synthesize serviceUrlStr;
+
 #pragma mark init & alloc 
 - (id)initWithUrlStr:(NSString*)urlStr{
 	self = [super init];
@@ -31,9 +32,9 @@
 }
 
 #pragma mark parse
-// var IPData = new Array("114.228.130.142","","江苏省","常州市");
-// 网络未连接情况下，等待时间很长，待修复bug 
+
 - (void)parseCityLocation{
     
 }
+
 @end
