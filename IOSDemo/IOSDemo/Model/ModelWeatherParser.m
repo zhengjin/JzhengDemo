@@ -8,6 +8,7 @@
 
 #import "ModelWeatherParser.h"
 
+#define ipServiceURLStr @"http://ip.taobao.com/service/getIpInfo.php?ip=180.223.43.0"
 #define ipWebServiceURLStr @"http://www.ip138.com/ips138.asp"
 #define weatherServiceURLStr @"http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx/getWeatherbyCityName?theCityName="
 
@@ -25,7 +26,7 @@
         [NSString stringWithContentsOfURL:[NSURL URLWithString:ipWebServiceURLStr] encoding:chineseEncoding error:&error];
 	NSLog(@"location info: %@", ipAddressInfo);
     
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"您的IP地址是：+:[^\\s]*" options:0 error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\d+\\.\\d+\\.\\d+\\.\\d+" options:0 error:&error];
     if (regex != nil) {
         NSTextCheckingResult *firstMatch = 
             [regex firstMatchInString:ipAddressInfo options:0 range:NSMakeRange(0, [ipAddressInfo length])];
@@ -39,7 +40,7 @@
     }
 
     //加载一个NSURL对象
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:weatherServiceURLStr]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:ipServiceURLStr]];
     //将请求的url数据放到NSData对象中
     NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     //IOS5自带解析类NSJSONSerialization从response中解析出数据放到字典中
